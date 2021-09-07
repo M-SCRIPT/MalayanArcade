@@ -185,6 +185,34 @@ header .logo
   color: #D332AB; 
 }
 
+h2:before{
+  font-size: 6em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.glow{
+  font-size: 6em;
+  font-weight: 800;
+  color: #fff;
+}
+
+.glow:hover{
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #D332AB, 0 0 20px #D332AB, 0 0 25px #D332AB, 0 0 30px #D332AB, 0 0 70px #D332AB;
+  }
+  
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 15px #99277d, 0 0 20px #99277d, 0 0 25px #99277d, 0 0 30px #99277d, 0 0 70px #99277d;
+  }
+}
+
 @media (max-width: 991px)
 {
   .showcase,
