@@ -199,15 +199,26 @@ h2:before{
   color: #fff;
   text-shadow: 0 0 2.5px #fff, 0 0 7.5px #99277d, 0 0 10px #99277d, 0 0 12.5px #99277d, 0 0 15px #99277d, 0 0 70px #99277d;
   transition: text-shadow 500ms ease-in-out;
+  animation: low-glow 1s infinite alternate;
   user-select: none;
 }
 
 .glow:hover {
-  animation: during-glow 1s infinite 501ms alternate;
+  animation: high-glow 1s infinite 501ms alternate;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #D332AB, 0 0 20px #D332AB, 0 0 25px #D332AB, 0 0 30px #D332AB, 0 0 70px #D332AB;
 }
 
-@keyframes during-glow {
+@keyframes low-glow {
+  0% {
+    text-shadow: 0 0 1px #fff, 0 0 5px #99277d, 0 0 6px #99277d, 0 0 8px #99277d, 0 0 12px #99277d, 0 0 40px #99277d;
+  }
+  
+  100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #99277d, 0 0 20px #99277d, 0 0 25px #99277d, 0 0 30px #99277d, 0 0 70px #99277d;
+  }
+}
+
+@keyframes high-glow {
   0% {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #D332AB, 0 0 20px #D332AB, 0 0 25px #D332AB, 0 0 30px #D332AB, 0 0 70px #D332AB;
   }
