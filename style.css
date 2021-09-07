@@ -117,7 +117,7 @@ header .logo
   display: inline-block;
   font-size: 1em;
   background: #fff;
-  padding: 10px 30px;
+  padding: 10px 25px;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 500;
@@ -128,7 +128,7 @@ header .logo
 }
 .text a:hover
 {
-  letter-spacing: 6px;
+  letter-spacing: 4px;
 }
 .social
 {
