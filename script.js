@@ -9,18 +9,17 @@ menuToggle.addEventListener('click', () => {
 // Glowing text
 const glowText = document.querySelector('.glow');
 
-glowText.addEventListener('mouseover', () => {
-  glowText.classList.add('enter-glow');
-  setTimeout(() => {
-    glowText.classList.remove('enter-glow');
-    glowText.classList.add('glowing');
-  }, 550);
-});
+// glowText.addEventListener('mouseenter', () => {
+//   glowText.classList.add('enter-glow');
+//   setTimeout(() => {
+//     glowText.classList.remove('enter-glow');
+//     glowText.classList.add('glowing');
+//   }, 550);
+// });
 
-glowText.addEventListener('mouseout', () => {
-  glowText.classList.remove('glowing');
-  glowText.classList.add('leave-glow');
-  setTimeout(() => {
-    glowText.classList.remove('leave-glow');
-  }, 500);
-});
+// glowText.addEventListener('mouseleave', () => {
+//   glowText.classList.add('leave-glow');
+//   setTimeout(() => {
+//     glowText.classList.remove('leave-glow');
+//   }, 500);
+// });
