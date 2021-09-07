@@ -199,16 +199,45 @@ h2:before{
   color: #fff;
 }
 
-.glow:hover{
-  animation: glow 1s ease-in-out infinite alternate;
+.glow.glowing {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #D332AB, 0 0 20px #D332AB, 0 0 25px #D332AB, 0 0 30px #D332AB, 0 0 70px #D332AB;
+  animation: during-glow 1s infinite alternate;
 }
 
-@-webkit-keyframes glow {
-  from {
+.glow.enter-glow {
+  animation: enter-glow 550ms ease-in;
+}
+
+.glow.leave-glow {
+  animation: exit-glow 500ms ease-out;
+}
+
+@keyframes enter-glow {
+  0% {
+    text-shadow: none;
+  }
+  
+  100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #D332AB, 0 0 20px #D332AB, 0 0 25px #D332AB, 0 0 30px #D332AB, 0 0 70px #D332AB;
+  }
+}
+
+@keyframes exit-glow {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 15px #99277d, 0 0 20px #99277d, 0 0 25px #99277d, 0 0 30px #99277d, 0 0 70px #99277d;
+  }
+
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes during-glow {
+  0% {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #D332AB, 0 0 20px #D332AB, 0 0 25px #D332AB, 0 0 30px #D332AB, 0 0 70px #D332AB;
   }
   
-  to {
+  100% {
     text-shadow: 0 0 5px #fff, 0 0 15px #99277d, 0 0 20px #99277d, 0 0 25px #99277d, 0 0 30px #99277d, 0 0 70px #99277d;
   }
 }
