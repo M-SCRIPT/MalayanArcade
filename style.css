@@ -90,7 +90,7 @@ header .logo
 
 .text h2
 {
-  font-size: 6em;
+  font-size: 5em;
   font-weight: 800;
   color: #fff;
   line-height: 1em;
@@ -98,7 +98,7 @@ header .logo
 }
 .text h3
 {
-  font-size: 5em;
+  font-size: 4em;
   font-weight: 700;
   color: #fff;
   line-height: 1em;
@@ -129,6 +129,8 @@ header .logo
 .text a:hover
 {
   letter-spacing: 3px;
+  background-color: #99277d;
+  color:#fff;
 }
 .social
 {
