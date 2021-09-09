@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block title %}Home{% endblock title %}
+{% block header %}<h2 class="logo"></h2>{% endblock header %}
+{% block content %}
+  <iframe src="{{ get_url(path='silence.mp3') }}" allow="autoplay" id="audio" style="display: none"></iframe>
+  <audio autoplay>
+      <!-- Song name: Darvel - What's Your Game (Garlic OST) -->
+      <source src="{{ get_url(path='song.mp3') }}" type="audio/mpeg">
+      <source src="{{ get_url(path='song.ogg') }}" type="audio/ogg">
+  </audio>
+  <h2 class="title glow">Malayan Arcade 2021</h2>
+  <h3>Let’s level up together:</h3>
+  <h3>Are you up for the challenge?</h3>
+  <p>Are you ready to add more challenge to your academic year?</p>
+  <p>MCM High School brings you to a entertaining club fair where you can meet new friends with the same passion as yours! </p>
+  <a href="{{ get_url(path='/clubs') }}">Explore</a>
+{% endblock content %}

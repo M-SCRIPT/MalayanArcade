@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+  {% set logo_img_path = 'clubs/' ~ page.slug ~ '/' ~ '/logo.png' %}
+  {% if page.extra.logo %}
+    {% set logo_img_path = 'clubs/' ~ page.slug ~ '/' ~ page.extra.logo %}
+  {% endif %}
+
+  <article class="club-information">
+    <section class="club-content-container">
+      <h2>{{ page.title }}</h2>
+      <img src="{{ get_url(path=logo_img_path) }}" alt="{{ page.title }}">
+      <p>Facebook Page: <a href="//{{ page.extra.facebook_url }}">{{ page.extra.facebook_url }}</a></p>
+      <div class="content">
+        <h4>Description</h4>
+        {{ page.content | safe }}
+      </div>
+    </section>
+  </article>
+{% endblock content %}

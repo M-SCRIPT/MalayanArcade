@@ -1,0 +1,21 @@
+# The URL the site will be built for
+base_url = "https://m-script.github.io/MalayanArcade"
+hard_link_static = false
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = false
+
+[extra]
+# Put all your custom variables here
+show_header_logo = true
+facebook_url = "https://facebook.com/mcm-script"
+discord_url = "https://discord.gg/hFsYY7Tab9"
+github_url = "https://github.com/m-script"
