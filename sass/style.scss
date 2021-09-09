@@ -1,13 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-*
-{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
-header
-{
+
+body {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
   position: absolute;
   top: 0;
   left: 0;
@@ -17,110 +26,105 @@ header
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  .site-brand {
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.6rem;
+  }
+
+  .toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url(https://i.ibb.co/HrfVRcx/menu.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+
+    &.active {
+      background: url(https://i.ibb.co/rt3HybH/close.png);
+      background-size: 25px;
+      background-position: center;
+      background-repeat: no-repeat;
+    } 
+  }
 }
-header .logo
-{
-  color: #fff;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-.toggle
-{
-  position: relative;
-  width: 60px;
-  height: 60px;
-  background: url(https://i.ibb.co/HrfVRcx/menu.png);
-  background-repeat: no-repeat;
-  background-size: 30px;
-  background-position: center;
-  cursor: pointer;
-}
-.toggle.active
-{
-  background: url(https://i.ibb.co/rt3HybH/close.png);
-  background-repeat: no-repeat;
-  background-size: 25px;
-  background-position: center;
-  cursor: pointer;
-}
-.showcase
-{
+
+main {
   position: absolute;
   right: 0;
   width: 100%;
   min-height: 100vh;
   padding: 100px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   background: #111;
   color: white;
   transition: 0.5s;
   z-index: 2;
-}
-.showcase.active
-{
-  right: 300px;
+
+  &.active {
+    right: 300px;
+  }
 }
 
-.showcase video
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.8;
+.background {
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(125,25,100,0.5);
+    mix-blend-mode: overlay;
+  }
 }
 
-.showcase img {
-  max-width: 100%;
-  height: auto;
-}
 
-.overlay
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(125,25,100,0.5);
-  mix-blend-mode: overlay;
-}
-.text
-{
-  position: relative;
-  z-index: 10;
-}
-
-.text h2
-{
+.title {
   font-size: 5em;
   font-weight: 800;
-  color: #fff;
   line-height: 1em;
   text-transform: uppercase;
 }
-.text h3
-{
+
+.title:before {
+  font-size: 6em;
+  font-weight: 800;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.subtitle {
   font-size: 4em;
   font-weight: 700;
-  color: #fff;
   line-height: 1em;
   text-transform: uppercase;
 }
-.text p
-{
+
+.lead-1 {
   font-size: 1.1em;
-  color: #fff;
   margin: 20px 0;
   font-weight: 400;
   max-width: 700px;
 }
-.text a
-{
+
+.button {
   display: inline-block;
   font-size: 1em;
   background: #fff;
@@ -132,40 +136,51 @@ header .logo
   color: #111;
   letter-spacing: 2px;
   transition: 0.2s;
+
+  &:hover {
+    letter-spacing: 3px;
+    background-color: #99277d;
+    color:#fff;
+  }
 }
-.text a:hover
-{
-  letter-spacing: 3px;
-  background-color: #99277d;
-  color:#fff;
+
+.main-content {
+  position: relative;
+  z-index: 10;
 }
-.social
-{
+
+footer {
   position: absolute;
   z-index: 10;
   bottom: 20px;
   display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.social {
+  display: flex;
   justify-content: center;
   align-items: center;
+
+  li {
+    list-style: none;
+
+    a {
+      display: inline-block;
+      margin-right: 20px;
+      filter: invert(1);
+      transform: scale(0.5);
+      transition: 0.5s;
+
+      &:hover {
+        transform: scale(0.5) translateY(-15px);
+      }
+    }
+  }
 }
-.social li
-{
-  list-style: none;
-}
-.social li a
-{
-  display: inline-block;
-  margin-right: 20px;
-  filter: invert(1);
-  transform: scale(0.5);
-  transition: 0.5s;
-}
-.social li a:hover
-{
-  transform: scale(0.5) translateY(-15px);
-}
-.menu
-{
+
+.menu {
   position: absolute;
   top: 0;
   right: 0;
@@ -174,32 +189,24 @@ header .logo
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.menu ul
-{
-  position: relative;
-}
-.menu ul li
-{
-  list-style: none;
-}
-.menu ul li a
-{
-  text-decoration: none;
-  font-size: 24px;
-  color: #111;
-}
-.menu ul li a:hover
-{
-  color: #D332AB; 
-}
 
-h2:before{
-  font-size: 6em;
-  font-weight: 800;
-  color: #fff;
-  line-height: 1em;
-  text-transform: uppercase;
+  ul {
+    position: relative;
+  }
+
+  ul li {
+    list-style: none;
+  }
+
+  ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #111;
+
+    &:hover {
+      color: #D332AB; 
+    }
+  }
 }
 
 .glow {
@@ -209,11 +216,11 @@ h2:before{
   transition: text-shadow 500ms ease-in-out;
   animation: low-glow 1s infinite alternate;
   user-select: none;
-}
 
-.glow:hover {
-  animation: high-glow 1s infinite 501ms alternate;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #D332AB, 0 0 20px #D332AB, 0 0 25px #D332AB, 0 0 30px #D332AB, 0 0 70px #D332AB;
+  &:hover {
+    animation: high-glow 1s infinite 501ms alternate;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #D332AB, 0 0 20px #D332AB, 0 0 25px #D332AB, 0 0 30px #D332AB, 0 0 70px #D332AB;
+  }
 }
 
 @keyframes low-glow {
@@ -236,40 +243,119 @@ h2:before{
   }
 }
 
-.club-list a
-{
-  display: inline-block;
-  font-size: 1em;
-  background: #fff;
-  padding: 20px 20px !important;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 500;
-  margin-top: 10px;
-  color: #111;
-  letter-spacing: 2px;
-  transition: 0.2s;
-}
-.club-list a:hover
-{
-  letter-spacing: 3px;
-  background-color: #99277d;
-  color:#fff;
+// Club Directory Page
+.club-directory-page {
+  .club-list a {
+    padding: 20px 20px;
+  }
 }
 
-@media (max-width: 991px)
-{
-  .showcase,
-  .showcase header
-  {
+// Club Page
+.club-page {
+  margin: 0 auto;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 3rem;
+
+  > .meta {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 2rem;
+
+    .title {
+      font-size: 3.5em;
+    }
+
+    > .logo {
+      width: 12rem;
+      margin: 0 auto;
+    }
+  }
+
+  .links {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+
+    .button {
+      margin: 0.1rem 0.2rem;
+    }
+  }
+
+  .tns-outer {
+    position: relative;
+
+    .tns-controls {
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      button {
+        height: 3.5rem;
+        width: 3.5rem;
+        margin: 1rem;
+        border-radius: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        border: none;
+        color: white;
+        font-family: inherit;
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.75);
+        }
+      }
+    }
+  }
+
+  .carousel {
+    margin-bottom: 2rem;
+
+    .tns-item {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+}
+
+.aspect-ratio-16-9 {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: (9 / 16) * 100%;
+  }
+
+  > .inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  main,
+  main header {
     padding: 40px;
   }
-  .text h2
-  {
+
+  .main-content h2 {
     font-size: 3em;
   }
-  .text h3
-  {
+
+  .main-content h3 {
     font-size: 2em;
   }
 }
