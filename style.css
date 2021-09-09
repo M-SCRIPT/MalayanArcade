@@ -126,12 +126,17 @@ header .logo
   letter-spacing: 2px;
   transition: 0.2s;
 }
+.text a img
+{
+	width: 120px;
+	height: 120px;
+}
 .clubs
 {
   display: inline-block;
   font-size: 1em;
   background: #fff;
-  padding: 50px 50px !important;
+  padding: 20px 20px !important;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 500;
@@ -139,6 +144,10 @@ header .logo
   color: #111;
   letter-spacing: 2px;
   transition: 0.2s;
+}
+.clubs:hover{
+  animation: high-glow 1s infinite 501ms alternate;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #D332AB, 0 0 20px #D332AB, 0 0 25px #D332AB, 0 0 30px #D332AB, 0 0 70px #D332AB;
 }
 .text a:hover
 {
