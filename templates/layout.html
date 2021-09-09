@@ -1,37 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}{% if page.title %}{{ page.title }}{% endif %}{% endblock title %} - Malayan Arcade 2021 - MCM SHS Club Fair</title>
-        <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
-    </head>
-    <body>
-        <section class="showcase">
-            <header>
-                {% block header %}
-                <h2 class="logo glow">Malayan Arcade 2021</h2>
-                {% endblock header %}
-                <div class="toggle"></div>
-            </header>
-            <video src="{{ get_url(path='video.mp4') }}" muted loop autoplay></video>
-            <div class="overlay"></div>
-            <div class="text">
-                {% block content %}{% endblock content %}
-            </div>
-            <ul class="social">
-                <li><a href="{{ config.extra.facebook_url }}"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
-                <li><a href="{{ config.extra.discord_url }}"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
-                <li><a href="{{ config.extra.github_url }}"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
-            </ul>
-        </section>
-        <!-- partial -->
-        <script src="{{ get_url(path='script.js') }}"></script>
-        <div class="menu">
-            <ul>
-                <li><a href="{{ get_url(path='/') }}">Home</a></li>
-                <li><a href="{{ get_url(path='/clubs') }}">Clubs</a></li>
-                <li><a href="{{ get_url(path='/about') }}">About the Devs</a></li>
-            </ul>
-        </div>  
-    </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}{% if page.title %}{{ page.title }}{% endif %}{% endblock title %} - Malayan Arcade 2021 - MCM
+    SHS Club Fair</title>
+  <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
+  {% block head %}{% endblock head %}
+</head>
+
+<body>
+  <main>
+    <header>
+      {% block header %}
+      <a href="{{ get_url(path='/') }}" class="site-brand glow">Malayan Arcade 2021</a>
+      {% endblock header %}
+      <span class="toggle"></span>
+    </header>
+
+    <section class="background">
+      <video src="{{ get_url(path='video.mp4') }}" muted loop autoplay></video>
+      <section class="overlay"></div>
+    </section>
+    
+    <section class="main-content">
+      {% block content %}{% endblock content %}
+    </section>
+
+    <footer>
+      <ul class="social">
+        <li><a href="{{ config.extra.facebook_url }}"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+        <li><a href="{{ config.extra.discord_url }}"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+        <li><a href="{{ config.extra.github_url }}"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+      </ul>
+    </footer>
+  </main>
+
+  <nav class="menu">
+    <ul>
+      <li><a href="{{ get_url(path='/') }}">Home</a></li>
+      <li><a href="{{ get_url(path='/clubs') }}">Clubs</a></li>
+      <li><a href="{{ get_url(path='/about') }}">About the Devs</a></li>
+    </ul>
+  </nav>
+
+  {% block foot %}{% endblock foot %}
+  <script src="{{ get_url(path='script.js') }}"></script>
+</body>
+
 </html>
