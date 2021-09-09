@@ -1,19 +1,57 @@
 {% extends "layout.html" %}
+{% set images_len = 0 %}
+
+{% block head %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css" integrity="sha512-eMxdaSf5XW3ZW1wZCrWItO2jZ7A9FhuZfjVdztr7ZsKNOmt6TUMTQgfpNoVRyfPE5S9BC0A4suXzsGSrAOWcoQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js" integrity="sha512-D/zaRVk05q6ERt1JgWB49kL6tyerY7a94egaVv6ObiGcw3OCEv0tvoPDEsVqL28HyAZhDd483ix8gkWQGDgEKw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% endblock head %}
+
 {% block content %}
-  {% set logo_img_path = 'clubs/' ~ page.slug ~ '/' ~ '/logo.png' %}
+  {% set clubs = get_section(path='clubs/_index.md') %}
+  {% set logo_img_path = clubs.path ~ page.slug ~ '/' ~ 'logo.png' %}
   {% if page.extra.logo %}
-    {% set logo_img_path = 'clubs/' ~ page.slug ~ '/' ~ page.extra.logo %}
+    {% set logo_img_path = clubs.path ~ page.slug ~ '/' ~ page.extra.logo %}
   {% endif %}
 
-  <article class="club-information">
-    <section class="club-content-container">
-      <h2>{{ page.title }}</h2>
-      <img src="{{ get_url(path=logo_img_path) }}" alt="{{ page.title }}">
-      <p>Facebook Page: <a href="//{{ page.extra.facebook_url }}">{{ page.extra.facebook_url }}</a></p>
-      <div class="content">
-        <h4>Description</h4>
-        {{ page.content | safe }}
-      </div>
+  <article class="club-page">
+    <section class="meta">
+      <img class="logo" src="{{ get_url(path=logo_img_path) }}" alt="{{ page.title }}">
+      <h1 class="title">{{ page.title }}</h1>
     </section>
+
+    {% if page.assets | length > 1 %}
+      <section class="carousel">
+        {% for asset in page.assets %}
+          {% if asset != logo_img_path and asset is matching("[.](jpg|png)$") %}
+            <div class="aspect-ratio-16-9" style="background-image: url({{ get_url(path=asset) }});"></div>
+          {% endif %}
+        {% endfor %}
+      </section>
+    {% endif %}
+
+    <section class="description">
+      <h4>About the club</h4>
+      {{ page.content | safe }}
+    </section>
+
+    {% if page.extra.links %} 
+      <section class="links">
+        {% for label, url in page.extra.links %}
+          <a class="button" href="//{{ url }}">{{ label }}</a>
+        {% endfor %}
+      </section>
+    {% endif %}
   </article>
 {% endblock content %}
+
+{% block foot %}
+<script>
+  var slider = tns({
+    container: '.carousel',
+    items: 1,
+    slideBy: 'page',
+    autoplay: false,
+    nav: false
+  });
+</script>
+{% endblock foot %}
