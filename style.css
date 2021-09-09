@@ -126,6 +126,20 @@ header .logo
   letter-spacing: 2px;
   transition: 0.2s;
 }
+.clubs
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 50px 50px !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
 .text a:hover
 {
   letter-spacing: 3px;
