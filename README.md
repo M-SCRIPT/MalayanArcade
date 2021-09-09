@@ -12,7 +12,7 @@ zola serve
 To generate the website, execute:
 ```
 # Execute this command only if you want to upload and publish it. 
-# For Github, this is not required. See "Development on Github Pages".
+# For Github, this is not required. See "Deployment on Github Pages".
 zola build
 ```
 
