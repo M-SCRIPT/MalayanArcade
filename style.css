@@ -196,7 +196,7 @@ h2:before{
 }
 
 .glow {
-  font-size: 6em;
+  
   font-weight: 800;
   color: #fff;
   text-shadow: 0 0 2.5px #fff, 0 0 7.5px #99277d, 0 0 10px #99277d, 0 0 12.5px #99277d, 0 0 15px #99277d, 0 0 70px #99277d;
