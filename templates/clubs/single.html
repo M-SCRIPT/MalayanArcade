@@ -9,11 +9,12 @@
     <section class="club-content-container">
       <h2>{{ page.title }}</h2>
       <img src="{{ get_url(path=logo_img_path) }}" alt="{{ page.title }}">
-      <p>Facebook Page: <a href="//{{ page.extra.facebook_url }}">{{ page.extra.facebook_url }}</a></p>
+      
       <div class="content">
-        <h4>Description</h4>
+        <h1>Description</h1>
         {{ page.content | safe }}
       </div>
+		<p>Facebook Page: <a href="//{{ page.extra.facebook_url }}">{{ page.extra.facebook_url }}</a></p>
     </section>
   </article>
 {% endblock content %}

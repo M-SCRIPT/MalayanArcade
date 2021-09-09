@@ -94,7 +94,12 @@ header .logo
   position: relative;
   z-index: 10;
 }
-
+h1
+{
+  font-size: 2em;
+  font-weight: 800;
+  line-height: 1em;
+}
 .text h2
 {
   font-size: 5em;
