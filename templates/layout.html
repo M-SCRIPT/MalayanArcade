@@ -3,8 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>{% block title %}{% if page.title %}{{ page.title }}{% endif %}{% endblock title %} - Malayan Arcade 2021 - MCM
-    SHS Club Fair</title>
+  <title>{% block title %}{% if page.title %}{{ page.title }}{% endif %}{% endblock title %} - Malayan Arcade 2021 - MCM SHS Club Fair</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ get_url(path='style.css', cachebust=true) }}">
   {% block head %}{% endblock head %}
 </head>
