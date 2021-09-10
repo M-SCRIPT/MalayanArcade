@@ -8,14 +8,11 @@
 
 {% block content %}
   {% set clubs = get_section(path='clubs/_index.md') %}
-  {% set logo_img_path = clubs.path ~ page.slug ~ '/' ~ 'logo.png' %}
-  {% if page.extra.logo %}
-    {% set logo_img_path = clubs.path ~ page.slug ~ '/' ~ page.extra.logo %}
-  {% endif %}
-
+  {% set logo_file_name = 'logo.png' %}
+  {% if page.extra.logo %}{% set logo_file_name = page.extra.logo %}{% endif %}
   <article class="club-page">
     <section class="meta">
-      <img class="logo" src="{{ get_url(path=logo_img_path) }}" alt="{{ page.title }}">
+      <img class="logo" src="{{ get_url(path=clubs.path ~ page.slug ~ '/' ~ logo_file_name) }}" alt="{{ page.title }}">
       <h1 class="title">{{ page.title }}</h1>
     </section>
 
@@ -24,7 +21,7 @@
         <div class="inner">
           <section class="carousel-inner">
             {% for asset in page.assets %}
-              {% if asset != logo_img_path and asset is matching("[.](jpg|png)$") %}
+              {% if asset is not ending_with(logo_file_name) and asset is matching("[.](jpg|png)$") %}
                 <div class="aspect-ratio-16-9" style="background-image: url({{ get_url(path=asset) }});"></div>
               {% endif %}
             {% endfor %}
