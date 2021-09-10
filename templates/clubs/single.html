@@ -8,6 +8,7 @@
   {% set should_autoscroll_carousel = true -%}
   {% set clubs = get_section(path='clubs/_index.md') -%}
   {% set logo_file_name = 'logo.png' -%}
+  {% set start_index = 0 -%}
   {% if page.extra.logo -%}{% set logo_file_name = page.extra.logo %}{% endif %}
   <article class="club-page">
     <section class="meta">
@@ -22,12 +23,16 @@
       <section class="carousel aspect-ratio-16-9">
         <div class="inner">
           <section class="carousel-inner">
+            {% set i = 0 -%}
             {% for asset in page.assets -%}
               {% if asset is not ending_with(logo_file_name) and asset is matching("[.](jpg|png)$") -%}
                 <div class="aspect-ratio-16-9" style="background-image: url({{ get_url(path=asset) }});"></div>
+                {% set_global i = i + 1 %}
               {% elif asset is matching("[.](mp4)$") -%}
                 {% set_global should_autoscroll_carousel = false -%}
+                {% set_global start_index = i %}
                 <video class="aspect-ratio-16-9" src="{{ get_url(path=asset) }}" controls autoplay muted></video>
+                {% set_global i = i + 1 %}
               {% endif %}
             {% endfor %}
           </section>
@@ -62,6 +67,7 @@
 
   <script>
     window.shouldAutoscroll = "{{ should_autoscroll_carousel }}" == "true";
+    window.startIndex = parseInt("{{ start_index }}");
   </script>
 {% endblock content %}
 
@@ -74,7 +80,8 @@
     autoplay: window.shouldAutoscroll,
     nav: false,
     controls: window.shouldAutoscroll,
-    mouseDrag: true
+    mouseDrag: true,
+    startIndex: window.startIndex
   });
 </script>
 {% endblock foot %}
