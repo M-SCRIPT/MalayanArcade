@@ -60,6 +60,11 @@ main {
   &.active {
     right: 300px;
   }
+
+  .main-content {
+    position: relative;
+    z-index: 10;
+  }
 }
 
 .background {
@@ -81,11 +86,6 @@ main {
     height: 100%;
     background: rgba(125,25,100,0.5);
     mix-blend-mode: overlay;
-  }
-
-  .main-content {
-    position: relative;
-    z-index: 10;
   }
 }
 
