@@ -2,7 +2,6 @@
 title = "Mathlayan Guild"
 
 [extra]
-slogan = "Hello World!"
 moderators = ["Janyssa Mariae B. Paña", "Raffy S. Centeno"]
 [extra.links]
 "Facebook Link" = "#"
