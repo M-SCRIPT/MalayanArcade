@@ -13,8 +13,8 @@
       {% endif %}
 
       <div class="club">
-        <a href="{{ get_url(path=section.path ~ club.slug) }}" class="button glow hover-only">
-          <img src="{{ get_url(path=logo_img_path) }}" height="120px" width="120px" alt="{{ club.title }}">
+        <a href="{{ get_url(path=section.path ~ club.slug) }}" class="button glow">
+          <img src="{{ get_url(path=logo_img_path) }}" alt="{{ club.title }}">
         </a>
       </div>
     {% endfor %}
