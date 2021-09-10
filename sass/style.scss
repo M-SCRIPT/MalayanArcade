@@ -157,12 +157,52 @@ footer {
 
 // Club Directory Page
 .club-directory-page {
-  .club-list a {
-    padding: 20px 20px;
+  .club-list {
+    display: flex;
+    flex-wrap: wrap;
 
-    &:hover {
-      transform: scale(1.15);
-      z-index: 1;
+    .club {
+      width: 33%;
+      margin-top: 0.2%;
+
+      &:not(:nth-child(3n)) {
+        margin-right: 0.2%;
+      }
+
+      // &:not(:nth-child(7n)) {
+      //   margin-right: 0.2%;
+      // }
+
+      &:before {
+        content: "";
+        float: left;
+        padding-top: 100%;
+      }
+
+      @media (min-width: 62rem) {
+        width: 14%;
+
+        &:nth-child(3n) {
+          margin-right: 0.2%;
+        }
+
+        &:not(:nth-child(7n)) {
+          margin-right: 0.2%;
+        }
+      }
+
+      a {
+        width: 100%;
+        height: 100%;
+        padding: 20px 20px;
+        transition: transform 250ms ease;
+    
+        &:hover {
+          background: #fff;
+          transform: scale(1.15);
+          z-index: 1;
+        }
+      }
     }
   }
 }

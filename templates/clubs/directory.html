@@ -12,9 +12,11 @@
         {% set logo_img_path = section.path ~ club.slug ~ '/' ~ club.extra.logo %}
       {% endif %}
 
-      <a href="{{ get_url(path=section.path ~ club.slug) }}" class="button clubs">
-        <img src="{{ get_url(path=logo_img_path) }}" height="120px" width="120px" alt="{{ club.title }}">
-      </a>
+      <div class="club">
+        <a href="{{ get_url(path=section.path ~ club.slug) }}" class="button glow hover-only">
+          <img src="{{ get_url(path=logo_img_path) }}" height="120px" width="120px" alt="{{ club.title }}">
+        </a>
+      </div>
     {% endfor %}
   </div>
 </section>
