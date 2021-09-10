@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>{% block title %}{% if page.title %}{{ page.title }}{% endif %}{% endblock title %} - Malayan Arcade 2021 - MCM
     SHS Club Fair</title>
-  <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
+  <link rel="stylesheet" href="{{ get_url(path='style.css', cachebust=true) }}">
   {% block head %}{% endblock head %}
 </head>
 
@@ -29,9 +29,13 @@
 
     <footer>
       <ul class="social">
-        <li><a href="{{ config.extra.facebook_url }}"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
-        <li><a href="{{ config.extra.discord_url }}"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
-        <li><a href="{{ config.extra.github_url }}"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+        {% for name, url in config.extra.social_links %}
+          <li>
+            <a href="{{ url }}">
+              <img src="{{ get_url(path='social_icons/' ~ name ~ '.svg') }}" alt="{{ name }}">
+            </a>
+          </li>
+        {% endfor %}
       </ul>
     </footer>
   </main>

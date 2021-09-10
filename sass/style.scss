@@ -156,25 +156,26 @@ footer {
   display: flex;
   align-items: center;
   justify-content: start;
-}
 
-.social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .social {
+    display: flex;
 
-  li {
-    list-style: none;
-
-    a {
-      display: inline-block;
-      margin-right: 20px;
-      filter: invert(1);
-      transform: scale(0.5);
-      transition: 0.5s;
-
-      &:hover {
-        transform: scale(0.5) translateY(-15px);
+    li {
+      list-style: none;
+      display: flex;
+  
+      a {
+        display: inline-block;
+        margin-right: 20px;
+        filter: invert(1);
+        transition: 0.5s;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+  
+        &:hover {
+          transform: translateY(-15px);
+        }
       }
     }
   }
