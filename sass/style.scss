@@ -1,21 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import "_base";
+@import "_utilities";
 
-body {
-  font-size: 16px;
-  font-family: 'Poppins', sans-serif;
-  color: #fff;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
+// Header
 header {
   position: absolute;
   top: 0;
@@ -54,6 +40,7 @@ header {
   }
 }
 
+// Main content
 main {
   position: absolute;
   right: 0;
@@ -95,62 +82,14 @@ main {
     background: rgba(125,25,100,0.5);
     mix-blend-mode: overlay;
   }
-}
 
-
-.title {
-  font-size: 5em;
-  font-weight: 800;
-  line-height: 1em;
-  text-transform: uppercase;
-}
-
-.title:before {
-  font-size: 6em;
-  font-weight: 800;
-  line-height: 1em;
-  text-transform: uppercase;
-}
-
-.subtitle {
-  font-size: 4em;
-  font-weight: 700;
-  line-height: 1em;
-  text-transform: uppercase;
-}
-
-.lead-1 {
-  font-size: 1.1em;
-  margin: 20px 0;
-  font-weight: 400;
-  max-width: 700px;
-}
-
-.button {
-  display: inline-block;
-  font-size: 1em;
-  background: #fff;
-  padding: 10px 25px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 500;
-  margin-top: 10px;
-  color: #111;
-  letter-spacing: 2px;
-  transition: 0.2s;
-
-  &:hover {
-    letter-spacing: 3px;
-    background-color: #99277d;
-    color:#fff;
+  .main-content {
+    position: relative;
+    z-index: 10;
   }
 }
 
-.main-content {
-  position: relative;
-  z-index: 10;
-}
-
+// Footer
 footer {
   position: absolute;
   z-index: 10;
@@ -159,6 +98,7 @@ footer {
   align-items: center;
   justify-content: start;
 
+  // Social Links
   .social {
     display: flex;
 
@@ -183,6 +123,7 @@ footer {
   }
 }
 
+// Navigation Menu
 .menu {
   position: absolute;
   top: 0;
@@ -212,44 +153,15 @@ footer {
   }
 }
 
-.glow {
-  font-weight: 800;
-  color: #fff;
-  text-shadow: 0 0 2.5px #fff, 0 0 7.5px #99277d, 0 0 10px #99277d, 0 0 12.5px #99277d, 0 0 15px #99277d, 0 0 70px #99277d;
-  transition: text-shadow 500ms ease-in-out;
-  animation: low-glow 1s infinite alternate;
-  user-select: none;
-
-  &:hover {
-    animation: high-glow 1s infinite 501ms alternate;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #D332AB, 0 0 20px #D332AB, 0 0 25px #D332AB, 0 0 30px #D332AB, 0 0 70px #D332AB;
-  }
-}
-
-@keyframes low-glow {
-  0% {
-    text-shadow: 0 0 1px #fff, 0 0 5px #99277d, 0 0 6px #99277d, 0 0 8px #99277d, 0 0 12px #99277d, 0 0 40px #99277d;
-  }
-  
-  100% {
-    text-shadow: 0 0 5px #fff, 0 0 10px #99277d, 0 0 20px #99277d, 0 0 25px #99277d, 0 0 30px #99277d, 0 0 70px #99277d;
-  }
-}
-
-@keyframes high-glow {
-  0% {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #D332AB, 0 0 20px #D332AB, 0 0 25px #D332AB, 0 0 30px #D332AB, 0 0 70px #D332AB;
-  }
-  
-  100% {
-    text-shadow: 0 0 5px #fff, 0 0 15px #99277d, 0 0 20px #99277d, 0 0 25px #99277d, 0 0 30px #99277d, 0 0 70px #99277d;
-  }
-}
-
 // Club Directory Page
 .club-directory-page {
   .club-list a {
     padding: 20px 20px;
+
+    &:hover {
+      transform: scale(1.15);
+      z-index: 1;
+    }
   }
 }
 
@@ -289,58 +201,59 @@ footer {
     }
   }
 
-  .tns-outer {
-    position: relative;
-    height: 100%;
-
-    button[data-action],
-    button[data-controls] {
-      border-radius: 10%;
-      background: rgba(0, 0, 0, 0.5);
-      border: none;
-      color: white;
-      font-family: inherit;
-
-      &:hover {
-        background: rgba(0, 0, 0, 0.75);
-      }
-    }
-
-    .tns-controls {
-      position: absolute;
-      top: 0;
-      z-index: 1;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      button[data-controls] {
-        height: 3.5rem;
-        width: 3.5rem;
-        margin: 1rem;
-        border-radius: 100%;
-      }
-    }
-
-    button[data-action="start"],
-    button[data-action="stop"] {
-      position: absolute;
-      bottom: 0;
-      left: 45%;
-      margin-bottom: 1rem;
-      z-index: 1;
-      padding: 0.5rem 1rem;
-    }
-
-    #tns1-mw {
-      height: 100%;
-    }
-  }
-
+  // Carousel
   .carousel {
     margin-bottom: 2rem;
+    
+    .tns-outer {
+      position: relative;
+      height: 100%;
+  
+      button[data-action],
+      button[data-controls] {
+        border-radius: 10%;
+        background: rgba(0, 0, 0, 0.5);
+        border: none;
+        color: white;
+        font-family: inherit;
+  
+        &:hover {
+          background: rgba(0, 0, 0, 0.75);
+        }
+      }
+  
+      .tns-controls {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+  
+        button[data-controls] {
+          height: 3.5rem;
+          width: 3.5rem;
+          margin: 1rem;
+          border-radius: 100%;
+        }
+      }
+  
+      button[data-action="start"],
+      button[data-action="stop"] {
+        position: absolute;
+        bottom: 0;
+        left: 45%;
+        margin-bottom: 1rem;
+        z-index: 1;
+        padding: 0.5rem 1rem;
+      }
+  
+      #tns1-mw {
+        height: 100%;
+      }
+    }
 
     .tns-item {
       background-size: cover;
@@ -350,39 +263,23 @@ footer {
   }
 }
 
-.aspect-ratio-16-9 {
-  position: relative;
-  &:before {
-    display: block;
-    content: "";
-    width: 100%;
-    padding-top: (9 / 16) * 100%;
-  }
-
-  > .inner {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-}
-
 @media (max-width: 991px) {
   .background video {
     display: none;
   }
 
   main,
-  main header {
+  header {
     padding: 40px;
   }
 
-  .main-content h2 {
-    font-size: 3em;
-  }
+  main .main-content {
+    h2 {
+      font-size: 3em;
+    }
 
-  .main-content h3 {
-    font-size: 2em;
+    h3 {
+      font-size: 2em;
+    }
   }
 }
