@@ -63,8 +63,10 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #111;
-  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #111;
   transition: 0.5s;
   z-index: 2;
 
@@ -367,6 +369,10 @@ footer {
 }
 
 @media (max-width: 991px) {
+  .background video {
+    display: none;
+  }
+
   main,
   main header {
     padding: 40px;
