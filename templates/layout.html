@@ -21,12 +21,13 @@
       {% endblock header %}
       <span class="toggle"></span>
     </header>
-
+    
+    {% block top_content %}
     <section class="background">
-      <video src="{{ get_url(path='video.mp4') }}" muted loop autoplay></video>
       <div class="overlay"></div>
     </section>
-    
+    {% endblock top_content %}
+
     <section class="main-content">
       {% block content %}{% endblock content %}
     </section>

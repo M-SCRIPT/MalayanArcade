@@ -1,6 +1,12 @@
 {% extends "layout.html" %}
 {% block title %}Home{% endblock title %}
 {% block header %}<h2 class="logo"></h2>{% endblock header %}
+{% block top_content %}
+<section class="background">
+  <video src="{{ get_url(path='video.mp4') }}" muted loop autoplay></video>
+  <div class="overlay"></div>
+</section>
+{% endblock top_content %}
 {% block content %}
   <!-- Background music -->
   <iframe src="{{ get_url(path='silence.mp3') }}" allow="autoplay" id="audio" style="display: none"></iframe>
