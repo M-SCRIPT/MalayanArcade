@@ -9,6 +9,8 @@ title = "Club XYZ"
 
 [extra]
 logo = "logo.png"
+slogan = "Hello World!"
+moderators = ["Juan de la Cruz"]
 
 [extra.links]
 "Facebook Page" = "https://facebook.com/malayanmindanao"
@@ -18,7 +20,10 @@ logo = "logo.png"
 Club description goes here!
 ```
 - `title` is the where you put the club name.
-- `logo` is where you will specify the file name of your logo. It must be declared below the `[extra]` section before the `[extra.links]` section. This is optional.
+### `[extra]` Section
+- `slogan` is the club tagline/slogan.
+- `moderators` is an array in which where you will specify the names of the club moderators.
+- `logo` is where you will specify the file name of your logo. It must be declared before the `[extra.links]` section. This is optional.
 - The `[extra.links]` section is where you will put your links. Link entries should be `"<link name>" = "<url>"`.
 
 ## Development
