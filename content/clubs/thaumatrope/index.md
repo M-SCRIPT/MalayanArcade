@@ -2,7 +2,6 @@
 title = "Thaumatrope"
 
 [extra]
-logo = "logo.jpg"
 slogan = "Tell your story, the best way!"
 moderators = ["Earl Clive N. Dacal"]
 
