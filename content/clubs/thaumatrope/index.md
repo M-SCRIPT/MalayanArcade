@@ -4,7 +4,7 @@ title = "Thaumatrope"
 [extra]
 logo = "logo.jpg"
 slogan = "Tell your story, the best way!"
-moderators = ["Earl Clive Dacal"]
+moderators = ["Earl Clive N. Dacal"]
 
 [extra.links]
 "Facebook Link" = "https://www.facebook.com/MCMAnimatorsClub"
