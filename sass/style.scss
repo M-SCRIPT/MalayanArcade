@@ -327,11 +327,29 @@ footer {
       margin-top: 0.5rem;
       font-size: 2em;
     }
+    
+    .subtitle {
+      margin-top: 1rem;
+      font-size: 1.8rem;
+      font-style: italic;
+      font-weight: 300;
+    }
 
     .logo {
       width: 25%;
       height: 100%;
-      margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+
+    .description, aside {
+      width: 100%;
     }
   }
 
@@ -445,9 +463,26 @@ footer {
         font-size: 3.5em;
         flex: 0;
       }
+
+      .subtitle {
+        font-size: 2.6rem;
+      }
   
       .logo {
         width: 12rem;
+      }
+    }
+
+    .details {
+      flex-direction: row;
+
+      .description {
+        flex: 1;
+      }
+
+      aside {
+        padding-left: 1rem;
+        width: 33%;
       }
     }
 
