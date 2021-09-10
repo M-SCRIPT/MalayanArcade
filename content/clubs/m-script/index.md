@@ -3,7 +3,7 @@ title = "M-SCRIPT"
 
 [extra]
 [extra.links]
-"Facebook Link" = "facebook.com/mcm-script"
+"Facebook Link" = "https://facebook.com/mcm-script"
 "Registration Link" = "#"
 "Stream Link" = "#"
 +++

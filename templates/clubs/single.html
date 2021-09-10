@@ -37,7 +37,7 @@
     {% if page.extra.links %} 
       <section class="links">
         {% for label, url in page.extra.links %}
-          <a class="button" href="//{{ url }}">{{ label }}</a>
+          <a class="button" href="{{ url }}">{{ label }}</a>
         {% endfor %}
       </section>
     {% endif %}

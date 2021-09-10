@@ -11,7 +11,7 @@ title = "Club XYZ"
 logo = "logo.png"
 
 [extra.links]
-"Facebook Page" = "facebook.com/malayanmindanao"
+"Facebook Page" = "https://facebook.com/malayanmindanao"
 "Another Link" = "google.com"
 +++
 

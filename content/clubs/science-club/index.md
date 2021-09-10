@@ -3,7 +3,7 @@ title = "Science Club"
 
 [extra]
 [extra.links]
-"Facebook Page" = "facebook.com/mcm-script"
+"Facebook Page" = "https://facebook.com/mcm-script"
 "Registration Link" = "#"
 "Stream Link" = "#"
 +++
