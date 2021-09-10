@@ -31,7 +31,7 @@
               {% elif asset is matching("[.](mp4)$") -%}
                 {% set_global should_autoscroll_carousel = false -%}
                 {% set_global start_index = i %}
-                <video class="aspect-ratio-16-9" src="{{ get_url(path=asset) }}" controls autoplay muted></video>
+                <video id="video" class="aspect-ratio-16-9" src="{{ get_url(path=asset) }}" controls autoplay muted></video>
                 {% set_global i = i + 1 %}
               {% endif %}
             {% endfor %}
@@ -68,6 +68,27 @@
   <script>
     window.shouldAutoscroll = "{{ should_autoscroll_carousel }}" == "true";
     window.startIndex = parseInt("{{ start_index }}");
+
+    // video
+    var videoEl = document.getElementById('video');
+    var ENDED_EVENT = 'ended';
+
+    function videoEndedHandler() {
+      window.shouldAutoscroll = true;
+      window.slider.refresh();
+      window.slider.goTo('next');
+      
+      var autoplay = setInterval(function() {
+        window.slider.goTo('next');
+        if (window.slider.getInfo().displayIndex - 1 == window.startIndex) {
+          videoEl.removeEventListener(ENDED_EVENT, videoEndedHandler);
+          clearInterval(autoplay);
+          return;
+        }
+      }, 10000);
+    }
+
+    videoEl.addEventListener(ENDED_EVENT, videoEndedHandler);
   </script>
 {% endblock content %}
 
