@@ -8,7 +8,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 40px;
+  padding: 30px 30px;
   z-index: 10;
   display: flex;
   justify-content: space-between;
@@ -19,13 +19,13 @@ header {
     text-transform: uppercase;
     cursor: pointer;
     text-decoration: none;
-    font-size: 1.6rem;
+    font-size: 1rem;
   }
 
   .toggle {
     position: relative;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     background: url(https://i.ibb.co/HrfVRcx/menu.png);
     background-repeat: no-repeat;
     background-size: 30px;
@@ -42,6 +42,15 @@ header {
 
   @include breakpoint(md) {
     padding: 40px 100px;
+
+    .site-brand {
+      font-size: 1.6rem;
+    }
+
+    .toggle {
+      width: 60px;
+      height: 60px;
+    }
   }
 }
 
@@ -192,7 +201,7 @@ footer {
 
 // Home Page
 .home-page {
-  margin-top: 10rem;
+  margin: 6rem 0;
   padding: 0 40px;
   display: flex;
   flex-direction: column;
@@ -214,7 +223,7 @@ footer {
 
 // Club Directory Page
 .club-directory-page {
-  padding: 0 40px;
+  padding: 16px 40px;
 
   .club-list {
     display: flex;
@@ -257,6 +266,11 @@ footer {
   }
 
   @include breakpoint(sm, max) {
+    .title {
+      font-size: 2em;
+      word-wrap: break-word;
+    }
+
     .club-list .club &:nth-child(7n) {
       margin-right: 3%;
     } 
