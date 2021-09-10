@@ -4,6 +4,7 @@ title = "Student Council"
 [extra]
 slogan = "We are the leaders of the future."
 moderators = ["D. Gravador"]
+
 [extra.links]
 "Facebook Page" = "#"
 "Registration Link" = "#"
