@@ -1,20 +1,19 @@
 {% extends "layout.html" %}
-{% set images_len = 0 %}
-
 {% block head %}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css" integrity="sha512-eMxdaSf5XW3ZW1wZCrWItO2jZ7A9FhuZfjVdztr7ZsKNOmt6TUMTQgfpNoVRyfPE5S9BC0A4suXzsGSrAOWcoQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js" integrity="sha512-D/zaRVk05q6ERt1JgWB49kL6tyerY7a94egaVv6ObiGcw3OCEv0tvoPDEsVqL28HyAZhDd483ix8gkWQGDgEKw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 {% endblock head %}
 
 {% block content %}
-  {% set clubs = get_section(path='clubs/_index.md') %}
-  {% set logo_file_name = 'logo.png' %}
-  {% if page.extra.logo %}{% set logo_file_name = page.extra.logo %}{% endif %}
+  {% set should_autoscroll_carousel = true -%}
+  {% set clubs = get_section(path='clubs/_index.md') -%}
+  {% set logo_file_name = 'logo.png' -%}
+  {% if page.extra.logo -%}{% set logo_file_name = page.extra.logo %}{% endif %}
   <article class="club-page">
     <section class="meta">
       <img class="logo" src="{{ get_url(path=clubs.path ~ page.slug ~ '/' ~ logo_file_name) }}" alt="{{ page.title }}">
       <h1 class="title">{{ page.title }}</h1>
-      {% if page.extra.slogan %}
+      {% if page.extra.slogan -%}
         <h2 class="subtitle">"{{ page.extra.slogan }}"</h2>
       {% endif %}
     </section>
@@ -23,9 +22,12 @@
       <section class="carousel aspect-ratio-16-9">
         <div class="inner">
           <section class="carousel-inner">
-            {% for asset in page.assets %}
-              {% if asset is not ending_with(logo_file_name) and asset is matching("[.](jpg|png)$") %}
+            {% for asset in page.assets -%}
+              {% if asset is not ending_with(logo_file_name) and asset is matching("[.](jpg|png)$") -%}
                 <div class="aspect-ratio-16-9" style="background-image: url({{ get_url(path=asset) }});"></div>
+              {% elif asset is matching("[.](mp4)$") -%}
+                {% set_global should_autoscroll_carousel = false -%}
+                <video class="aspect-ratio-16-9" src="{{ get_url(path=asset) }}" controls autoplay muted></video>
               {% endif %}
             {% endfor %}
           </section>
@@ -39,24 +41,28 @@
         {{ page.content | safe }}
       </div>
 
-      {% if page.extra.moderators %}
+      {% if page.extra.moderators -%}
       <aside>
         <h4>Club Moderators</h4>
-        {% for name in page.extra.moderators %}
+        {% for name in page.extra.moderators -%}
           <p>{{ name }}</p>
         {% endfor %}
       </aside>
       {% endif %}
     </section>
 
-    {% if page.extra.links %} 
+    {% if page.extra.links -%} 
       <section class="links">
-        {% for label, url in page.extra.links %}
+        {% for label, url in page.extra.links -%}
           <a class="button" href="{{ url }}">{{ label }}</a>
         {% endfor %}
       </section>
     {% endif %}
   </article>
+
+  <script>
+    window.shouldAutoscroll = "{{ should_autoscroll_carousel }}" == "true";
+  </script>
 {% endblock content %}
 
 {% block foot %}
@@ -65,8 +71,9 @@
     container: '.carousel-inner',
     items: 1,
     slideBy: 'page',
-    autoplay: true,
+    autoplay: window.shouldAutoscroll,
     nav: false,
+    controls: window.shouldAutoscroll,
     mouseDrag: true
   });
 </script>
