@@ -1,5 +1,5 @@
 +++
-title = "M-SCRIPT"
+title = "Malayan Students for Creative Research in IOT, Programming, and Technology"
 
 [extra]
 [extra.links]
