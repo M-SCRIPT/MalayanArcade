@@ -219,14 +219,14 @@ footer {
   .club-list {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 1.5rem;
 
     .club {
-      width: 33%;
-      margin-top: 0.2%;
+      width: 29%;
+      margin-top: 3%;
 
-      &:nth-child(7n), 
       &:not(:nth-child(3n)) {
-        margin-right: 0.2%;
+        margin-right: 3%;
       }
 
       &:before {
@@ -238,14 +238,17 @@ footer {
       a {
         width: 100%;
         height: 100%;
-        padding: 20px 20px;
-        transition: transform 250ms ease;
+        padding: 1px 10px;
+        transition: transform 250ms ease, background-color 250ms ease;
         display: flex;
         justify-content: center;
         align-items: center;
+        // background-color: rgba(255, 255, 255, 0.75);
+        background-color: transparent;
+        margin-top: 0;
     
         &:hover {
-          background: #fff;
+          background-color: #99277d;
           transform: scale(1.15);
           z-index: 1;
         }
@@ -253,17 +256,41 @@ footer {
     }
   }
 
+  @include breakpoint(sm, max) {
+    .club-list .club &:nth-child(7n) {
+      margin-right: 3%;
+    } 
+  }
+
   @include breakpoint(md) {
     padding: 0;
 
     .club-list .club {
-      width: 14%;
+      width: 22%;
+      margin-top: 1.25%;
 
       &:nth-child(3n), 
+      &:not(:nth-child(3n)),
       &:not(:nth-child(7n)) {
-        margin-right: 0.2%;
+        margin-right: 1.25%;
+      }
+
+      a {
+        padding: 10px 30px;
       }
     } 
+  }
+
+  @include breakpoint(992px) {
+    .club-list .club {
+      width: 18%;
+    }
+  }
+
+  @include breakpoint(1120px) {
+    .club-list .club {
+      width: 13%;
+    }
   }
 }
 
