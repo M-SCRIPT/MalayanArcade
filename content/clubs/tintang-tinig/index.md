@@ -2,7 +2,6 @@
 title = "Tintang Tinig"
 
 [extra]
-slogan = "Hello World!"
 moderators = ["Mark Anthony Arellano","Jennifer Suganob"]
 
 [extra.links]
