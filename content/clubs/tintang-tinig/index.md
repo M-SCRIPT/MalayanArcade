@@ -2,11 +2,19 @@
 title = "Tintang Tinig"
 
 [extra]
-facebook_url = "facebook.com/malayanmindanao"
+slogan = "Hello World!"
+moderators = ["Mr. Kevin Cardoza"]
+
+[extra.links]
+"Facebook Link" = "#"
+"Registration Link" = "https://forms.office.com/Pages/ResponsePage.aspx?id=WGffncW45UyLv_jIzJ3UHQI9CGrRHSdNmmM7mc4rIwBUN0NGOExIQ01TRzY5QzNJM0tSS09SMFNLQy4u"
+"Stream Link" = "https://teams.microsoft.com/l/meetup-join/19%3aeOdDh3IGPBo1OYKWURLAOEBZ-uvzu02M4v4QTo0zD7I1%40thread.tacv2/1631270715402?context=%7b%22Tid%22%3a%229ddf6758-b8c5-4ce5-8bbf-f8c8cc9dd41d%22%2c%22Oid%22%3a%226a083d02-1dd1-4d27-9a63-3b99ce2b2300%22%7d"
 +++
 
-Imperdiet justo sagittis fermentum eros fermentum feugiat quisque suspendisse consectetur consectetur vestibulum quam in nostra suspendisse id natoque in nunc parturient neque neque dolor. Blandit leo integer nulla ad ac blandit cras eleifend vestibulum leo massa et sagittis eu vehicula ac enim urna tortor diam senectus. Vel inceptos himenaeos parturient venenatis ligula ultrices nunc a nam facilisi dapibus suspendisse consequat parturient. Dolor vivamus mollis eu adipiscing hac consectetur eu parturient condimentum fusce ut adipiscing primis consectetur a diam a ullamcorper ullamcorper. Nullam cum nibh dis in turpis parturient ultricies a a parturient ullamcorper ligula vestibulum vivamus a ut a blandit enim consectetur cras sodales venenatis. 
+SCRIPT (Students for Creative Research in IoT, Programming and Technology) is an organization which will provide a fun opportunity for students to broaden their knowledge in Programming and to interact with other students that share the same interest.The Tintang Tinig is the official school publication of Filipino Department of Malayan Colleges Mindanao, this will promote the development and growth of responsible journalism as means of strengthening ethical values, encouraging critical and creative thinking. 
+It’s main objective is to inform the public with the news relevant to the students interest. In this way, this will serve as a venue of campus opinion in maintaining each intellectual curiosity's free and responsible discussion.  
+The Tintang Tinig will serve as the voice of the students in protecting and promoting press freedom.
 
-Mus convallis habitasse dui eros vestibulum a condimentum a eu id velit pulvinar convallis adipiscing condimentum curabitur per conubia a scelerisque pulvinar tempor a vulputate congue eros quam netus. Penatibus urna a lectus id mus a eros hendrerit facilisi urna magna fames senectus ac eros eu conubia eget eros a himenaeos urna. Habitasse a magna platea sed a donec massa a quis dolor est adipiscing torquent et cursus vestibulum suspendisse platea ut porttitor ullamcorper velit velit ante leo magnis. Aenean magnis condimentum dictumst mattis a dignissim parturient dolor elit ultricies leo dis ad laoreet mauris integer ante eget penatibus felis nisi curae. Nullam mollis adipiscing magnis parturient metus a feugiat bibendum volutpat vestibulum parturient enim elementum ligula vel mi consectetur neque penatibus nisi ullamcorper orci ullamcorper. 
-
-Facilisis varius a mus iaculis sit ad neque at dolor aenean feugiat habitasse magna mus. Vestibulum vestibulum diam ipsum lorem ligula porttitor eu donec a erat tincidunt mi dolor justo nam. Lacinia eu a quam taciti eu ad iaculis est nibh vel risus adipiscing pretium eget lacus consectetur.
+Ang Tintang Tinig ay ang opisyal na publikasyong ng Malayan Colleges Mindanao, iisinusulong nito ang pag-unlad at paglago ng responsableng pamamahayag bilang paraan ng pagpapatibay ng mga halagang etikal, kritikal at malikhaing pag-iisip. 
+Pangunahing layunin nito na ipaalam sa publiko ang kasalukuyang nangyayari na nauugnay sa interes ng mga mag-aaral. Sa ganitong paraan, magsisilbi itong tulay upang maipahayag ang opinyon ng mga mag-aaral sa pagpapanatili ng malaya at responsableng talakayan higit lalo sa intelektwal na interes. 
+Ang Tintang Tinig ay magsisilbing boses ng mga mag-aaral sa pagprotekta at pagsusulong ng kalayaan sa pamamahayag. 
