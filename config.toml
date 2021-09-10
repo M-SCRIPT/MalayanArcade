@@ -16,6 +16,7 @@ highlight_code = false
 [extra]
 # Put all your custom variables here
 show_header_logo = true
-facebook_url = "https://facebook.com/mcm-script"
-discord_url = "https://discord.gg/hFsYY7Tab9"
-github_url = "https://github.com/m-script"
+
+[extra.social_links]
+facebook = "https://facebook.com/mcm-script"
+discord = "https://discord.gg/hFsYY7Tab9"

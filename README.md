@@ -1,8 +1,30 @@
 # Malayan Arcade website
+## Add a Club
+1. Make a folder inside the `content/clubs` directory. The folder name should not contain spaces. Use a hyphen/dash (`-`) to separate the words. If your club's name is "Club XYZ", your folder name should be "club-xyz" (without the quotes).
+2. Inside the folder, add the club's logo. Rename it to `logo.png` for PNG files or `logo.jpg` for JPEG files. If your logo has a different format or want to keep the name, see step 3.
+3. In the same folder, create a `index.md` file with the following format:
+```md
++++
+title = "Club XYZ"
+
+[extra]
+logo = "logo.png"
+
+[extra.links]
+"Facebook Page" = "https://facebook.com/malayanmindanao"
+"Another Link" = "google.com"
++++
+
+Club description goes here!
+```
+- `title` is the where you put the club name.
+- `logo` is where you will specify the file name of your logo. It must be declared below the `[extra]` section before the `[extra.links]` section. This is optional.
+- The `[extra.links]` section is where you will put your links. Link entries should be `"<link name>" = "<url>"`.
+
 ## Development
 To run the website locally, install [Zola](https://www.getzola.org/documentation/getting-started/installation/) first.
 
-Afterwards, open terminal pointing to this folder and execute:
+Afterwards, open the terminal pointing to this folder and execute:
 ```
 # Execute this command only if you are making changes to
 # the website and want to see the contents immediately.

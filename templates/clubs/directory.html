@@ -1,21 +1,23 @@
 {% extends "layout.html" %}
 {% block title %}{{ section.title }}{% endblock title %}
 {% block content %}
-  <div class="club-directory">
-    <h2 class="title glow">{{ section.title }}</h2>
-    <h3></h3>
-    <h3>Are you up for the challenge?</h3>
-    <div class="club-list">
-      {% for club in section.pages %}
-        {% set logo_img_path = section.path ~ club.slug ~ '/logo.png' %}
-        {% if club.extra.logo %}
-          {% set logo_img_path = section.path ~ club.slug ~ '/' ~ club.extra.logo %}
-        {% endif %}
+<section class="club-directory-page">
+  <h2 class="title glow-text">{{ section.title }}</h2>
+  <h3 class="subtitle">Are you up for the challenge?</h3>
 
-        <a href="{{ get_url(path=section.path ~ club.slug) }}" class="clubs">
-          <img src="{{ get_url(path=logo_img_path) }}" height="120px" width="120px" alt="{{ club.title }}">
+  <div class="club-list">
+    {% for club in section.pages %}
+      {% set logo_img_path = section.path ~ club.slug ~ '/logo.png' %}
+      {% if club.extra.logo %}
+        {% set logo_img_path = section.path ~ club.slug ~ '/' ~ club.extra.logo %}
+      {% endif %}
+
+      <div class="club">
+        <a href="{{ get_url(path=section.path ~ club.slug) }}" class="button glow">
+          <img src="{{ get_url(path=logo_img_path) }}" alt="{{ club.title }}">
         </a>
-      {% endfor %}
-    </div>
+      </div>
+    {% endfor %}
   </div>
+</section>
 {% endblock content %}
