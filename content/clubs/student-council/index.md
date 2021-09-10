@@ -2,12 +2,12 @@
 title = "Student Council"
 
 [extra]
+slogan = "We are the leaders of the future."
+moderators = ["Mr. Kevin Cardoza"]
 [extra.links]
 "Facebook Page" = "https://facebook.com/malayanmindanao"
+"Registration Link" = "#"
+"Stream Link" = "https://teams.microsoft.com/l/meetup-join/19%3ameeting_YWQzYWFhZDUtMWNjZC00MTU1LTljMjEtOWQzZGIzMWMzNDA0%40thread.v2/0?context=%7b%22Tid%22%3a%229ddf6758-b8c5-4ce5-8bbf-f8c8cc9dd41d%22%2c%22Oid%22%3a%22904d94a4-ca55-4fce-9613-d17b57fa82d0%22%7d"
 +++
 
-Imperdiet justo sagittis fermentum eros fermentum feugiat quisque suspendisse consectetur consectetur vestibulum quam in nostra suspendisse id natoque in nunc parturient neque neque dolor. Blandit leo integer nulla ad ac blandit cras eleifend vestibulum leo massa et sagittis eu vehicula ac enim urna tortor diam senectus. Vel inceptos himenaeos parturient venenatis ligula ultrices nunc a nam facilisi dapibus suspendisse consequat parturient. Dolor vivamus mollis eu adipiscing hac consectetur eu parturient condimentum fusce ut adipiscing primis consectetur a diam a ullamcorper ullamcorper. Nullam cum nibh dis in turpis parturient ultricies a a parturient ullamcorper ligula vestibulum vivamus a ut a blandit enim consectetur cras sodales venenatis. 
-
-Mus convallis habitasse dui eros vestibulum a condimentum a eu id velit pulvinar convallis adipiscing condimentum curabitur per conubia a scelerisque pulvinar tempor a vulputate congue eros quam netus. Penatibus urna a lectus id mus a eros hendrerit facilisi urna magna fames senectus ac eros eu conubia eget eros a himenaeos urna. Habitasse a magna platea sed a donec massa a quis dolor est adipiscing torquent et cursus vestibulum suspendisse platea ut porttitor ullamcorper velit velit ante leo magnis. Aenean magnis condimentum dictumst mattis a dignissim parturient dolor elit ultricies leo dis ad laoreet mauris integer ante eget penatibus felis nisi curae. Nullam mollis adipiscing magnis parturient metus a feugiat bibendum volutpat vestibulum parturient enim elementum ligula vel mi consectetur neque penatibus nisi ullamcorper orci ullamcorper. 
-
-Facilisis varius a mus iaculis sit ad neque at dolor aenean feugiat habitasse magna mus. Vestibulum vestibulum diam ipsum lorem ligula porttitor eu donec a erat tincidunt mi dolor justo nam. Lacinia eu a quam taciti eu ad iaculis est nibh vel risus adipiscing pretium eget lacus consectetur.
+This is the organization for the student leaders of MCM High School Department. 
