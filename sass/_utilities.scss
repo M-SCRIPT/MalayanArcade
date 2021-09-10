@@ -1,3 +1,5 @@
+@import "_mixins";
+
 // Aspect Ratio
 .aspect-ratio-16-9 {
   position: relative;
@@ -19,7 +21,7 @@
 
 // Text Utilities
 .title {
-  font-size: 5em;
+  font-size: 3em;
   font-weight: 800;
   line-height: 1em;
   text-transform: uppercase;
@@ -30,20 +32,27 @@
     line-height: 1em;
     text-transform: uppercase;
   }
+
+  @include breakpoint(lg) {
+    font-size: 5em;
+  }
 }
 
 .subtitle {
-  font-size: 4em;
+  font-size: 2em;
   font-weight: 700;
   line-height: 1em;
   text-transform: uppercase;
+
+  @include breakpoint(lg) {
+    font-size: 4em;
+  }
 }
 
 .lead-1 {
   font-size: 1.1em;
   margin: 20px 0;
   font-weight: 400;
-  max-width: 700px;
 }
 
 // Button
@@ -79,26 +88,6 @@
   &:hover {
     animation: high-glow-text 1s infinite 501ms alternate;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #D332AB, 0 0 20px #D332AB, 0 0 25px #D332AB, 0 0 30px #D332AB, 0 0 70px #D332AB;
-  }
-}
-
-@keyframes low-glow-text {
-  0% {
-    text-shadow: 0 0 1px #fff, 0 0 5px #99277d, 0 0 6px #99277d, 0 0 8px #99277d, 0 0 12px #99277d, 0 0 40px #99277d;
-  }
-  
-  100% {
-    text-shadow: 0 0 5px #fff, 0 0 10px #99277d, 0 0 20px #99277d, 0 0 25px #99277d, 0 0 30px #99277d, 0 0 70px #99277d;
-  }
-}
-
-@keyframes high-glow-text {
-  0% {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #D332AB, 0 0 20px #D332AB, 0 0 25px #D332AB, 0 0 30px #D332AB, 0 0 70px #D332AB;
-  }
-  
-  100% {
-    text-shadow: 0 0 5px #fff, 0 0 15px #99277d, 0 0 20px #99277d, 0 0 25px #99277d, 0 0 30px #99277d, 0 0 70px #99277d;
   }
 }
 

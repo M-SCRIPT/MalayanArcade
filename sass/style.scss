@@ -1,5 +1,6 @@
 @import "_base";
 @import "_utilities";
+@import "_mixins";
 
 // Header
 header {
@@ -7,7 +8,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 40px 100px;
+  padding: 20px 40px;
   z-index: 10;
   display: flex;
   justify-content: space-between;
@@ -38,6 +39,10 @@ header {
       background-repeat: no-repeat;
     } 
   }
+
+  @include breakpoint(md) {
+    padding: 40px 100px;
+  }
 }
 
 // Main content
@@ -46,25 +51,67 @@ main {
   right: 0;
   width: 100%;
   min-height: 100vh;
-  padding: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 20px 0;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-color: #111;
-  transition: 0.5s;
+  transition: right 0.5s;
   z-index: 2;
 
   &.active {
-    right: 300px;
+    right: 50%;
   }
 
   .main-content {
     position: relative;
     z-index: 10;
+    margin-top: 5rem;
+  }
+
+  @include breakpoint(md) {
+    padding: 100px;
+  }
+
+  @include breakpoint(lg) {
+    &.active {
+      right: 25%;
+    }
+  }
+}
+
+// Navigation Menu
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    position: relative;
+  }
+
+  ul li {
+    list-style: none;
+  }
+
+  ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #111;
+
+    &:hover {
+      color: #D332AB; 
+    }
+  }
+
+  @include breakpoint(lg) {
+    width: 25%;
   }
 }
 
@@ -77,7 +124,12 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.8;
+    // opacity: 0.8;
+    display: none;
+
+    @include breakpoint(lg) {
+      display: block;
+    }
   }
   
   .overlay {
@@ -93,12 +145,12 @@ main {
 
 // Footer
 footer {
-  position: absolute;
   z-index: 10;
-  bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: start;
+  margin-top: 3rem;
+  padding: 0 40px;
 
   // Social Links
   .social {
@@ -123,40 +175,47 @@ footer {
       }
     }
   }
+
+  @include breakpoint(md) {
+    padding: 0;
+  }
 }
 
-// Navigation Menu
-.menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 300px;
-  height: 100%;
+// Generic Pages
+.page {
+  padding: 0 40px;
+
+  @include breakpoint(md) {
+    padding: 0;
+  }
+}
+
+// Home Page
+.home-page {
+  margin-top: 10rem;
+  padding: 0 40px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
+  text-align: center;
 
-  ul {
-    position: relative;
-  }
+  @include breakpoint(md) {
+    margin-top: 0;
+    padding: 0;
+    text-align: left;
+    align-items: flex-start;
 
-  ul li {
-    list-style: none;
-  }
-
-  ul li a {
-    text-decoration: none;
-    font-size: 24px;
-    color: #111;
-
-    &:hover {
-      color: #D332AB; 
+    .lead-1 {
+      max-width: 700px;
     }
   }
 }
 
 // Club Directory Page
 .club-directory-page {
+  padding: 0 40px;
+
   .club-list {
     display: flex;
     flex-wrap: wrap;
@@ -165,13 +224,10 @@ footer {
       width: 33%;
       margin-top: 0.2%;
 
+      &:nth-child(7n), 
       &:not(:nth-child(3n)) {
         margin-right: 0.2%;
       }
-
-      // &:not(:nth-child(7n)) {
-      //   margin-right: 0.2%;
-      // }
 
       &:before {
         content: "";
@@ -179,23 +235,14 @@ footer {
         padding-top: 100%;
       }
 
-      @media (min-width: 62rem) {
-        width: 14%;
-
-        &:nth-child(3n) {
-          margin-right: 0.2%;
-        }
-
-        &:not(:nth-child(7n)) {
-          margin-right: 0.2%;
-        }
-      }
-
       a {
         width: 100%;
         height: 100%;
         padding: 20px 20px;
         transition: transform 250ms ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     
         &:hover {
           background: #fff;
@@ -205,18 +252,29 @@ footer {
       }
     }
   }
+
+  @include breakpoint(md) {
+    padding: 0;
+
+    .club-list .club {
+      width: 14%;
+
+      &:nth-child(3n), 
+      &:not(:nth-child(7n)) {
+        margin-right: 0.2%;
+      }
+    } 
+  }
 }
 
 // Club Page
 .club-page {
-  margin: 0 auto;
-  width: 75%;
   display: flex;
   flex-direction: column;
   background: rgba(0, 0, 0, 0.5);
-  padding: 3rem;
+  padding: 1rem;
 
-  > .meta {
+  .meta {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -224,11 +282,14 @@ footer {
     padding-bottom: 2rem;
 
     .title {
-      font-size: 3.5em;
+      flex: 1;
+      margin-top: 0.5rem;
+      font-size: 2em;
     }
 
-    > .logo {
-      width: 12rem;
+    .logo {
+      width: 25%;
+      height: 100%;
       margin: 0 auto;
     }
   }
@@ -236,7 +297,8 @@ footer {
   .links {
     margin-top: 2rem;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 
     .button {
       margin: 0.1rem 0.2rem;
@@ -267,18 +329,32 @@ footer {
       .tns-controls {
         position: absolute;
         top: 0;
-        z-index: 1;
         width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        z-index: 1;
+        opacity: 0;
+        display: none;
+        transition: opacity 0.5s ease;
   
         button[data-controls] {
           height: 3.5rem;
           width: 3.5rem;
-          margin: 1rem;
           border-radius: 100%;
+
+          &:first-child {
+            margin-left: 1rem;
+          }
+
+          &:last-child {
+            margin-right: 1rem;
+          }
+        }
+
+        &:hover {
+          opacity: 1;
         }
       }
   
@@ -286,10 +362,10 @@ footer {
       button[data-action="stop"] {
         position: absolute;
         bottom: 0;
-        left: 45%;
-        margin-bottom: 1rem;
         z-index: 1;
-        padding: 0.5rem 1rem;
+        margin-left: 0.5rem;
+        margin-bottom: 0.5rem;
+        padding: 0.3rem 0.8rem;
       }
   
       #tns1-mw {
@@ -303,25 +379,41 @@ footer {
       background-position: center center;
     }
   }
-}
 
-@media (max-width: 991px) {
-  .background video {
-    display: none;
+  @include breakpoint(md) {
+    .carousel .tns-controls {
+      display: block;
+    }
+    
+    .carousel {
+      button[data-action="start"],
+      button[data-action="stop"] {
+        left: 45%;
+        margin-bottom: 1rem;
+        padding: 0.5rem 1rem;
+      }
+    }
   }
 
-  main,
-  header {
-    padding: 40px;
-  }
+  @include breakpoint(lg) {
+    padding: 3rem;
+    margin: 0 auto;
+    width: 75%;
 
-  main .main-content {
-    h2 {
-      font-size: 3em;
+    .meta {
+      .title {
+        font-size: 3.5em;
+        flex: 0;
+      }
+  
+      .logo {
+        width: 12rem;
+      }
     }
 
-    h3 {
-      font-size: 2em;
+    .links {
+      flex-direction: row;
+      justify-content: center;
     }
   }
 }
