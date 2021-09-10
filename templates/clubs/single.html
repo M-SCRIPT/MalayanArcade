@@ -20,12 +20,16 @@
     </section>
 
     {% if page.assets | length > 1 %}
-      <section class="carousel">
-        {% for asset in page.assets %}
-          {% if asset != logo_img_path and asset is matching("[.](jpg|png)$") %}
-            <div class="aspect-ratio-16-9" style="background-image: url({{ get_url(path=asset) }});"></div>
-          {% endif %}
-        {% endfor %}
+      <section class="carousel aspect-ratio-16-9">
+        <div class="inner">
+          <section class="carousel-inner">
+            {% for asset in page.assets %}
+              {% if asset != logo_img_path and asset is matching("[.](jpg|png)$") %}
+                <div class="aspect-ratio-16-9" style="background-image: url({{ get_url(path=asset) }});"></div>
+              {% endif %}
+            {% endfor %}
+          </section>
+        </div>
       </section>
     {% endif %}
 
@@ -47,10 +51,10 @@
 {% block foot %}
 <script>
   var slider = tns({
-    container: '.carousel',
+    container: '.carousel-inner',
     items: 1,
     slideBy: 'page',
-    autoplay: false,
+    autoplay: true,
     nav: false
   });
 </script>

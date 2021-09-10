@@ -288,6 +288,20 @@ footer {
 
   .tns-outer {
     position: relative;
+    height: 100%;
+
+    button[data-action],
+    button[data-controls] {
+      border-radius: 10%;
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      font-family: inherit;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.75);
+      }
+    }
 
     .tns-controls {
       position: absolute;
@@ -299,20 +313,26 @@ footer {
       align-items: center;
       justify-content: space-between;
 
-      button {
+      button[data-controls] {
         height: 3.5rem;
         width: 3.5rem;
         margin: 1rem;
         border-radius: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        border: none;
-        color: white;
-        font-family: inherit;
-
-        &:hover {
-          background: rgba(0, 0, 0, 0.75);
-        }
       }
+    }
+
+    button[data-action="start"],
+    button[data-action="stop"] {
+      position: absolute;
+      bottom: 0;
+      left: 45%;
+      margin-bottom: 1rem;
+      z-index: 1;
+      padding: 0.5rem 1rem;
+    }
+
+    #tns1-mw {
+      height: 100%;
     }
   }
 
