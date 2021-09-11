@@ -492,3 +492,24 @@ footer {
     }
   }
 }
+
+// About
+.about-page {
+  max-width: 900px;
+  margin: 0 auto;
+
+  #developers {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+
+    .developer-info {
+      width: 33.33%;
+      text-align: center;
+
+      img {
+        border-radius: 100%;
+      }
+    }
+  }
+}

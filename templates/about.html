@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+  <section class="about-page">
+    <h2>{{ page.title }}</h2>
+    
+    <section id="developers">
+      {% for person in page.extra.developers %}
+        <article class="developer-info">
+          <img class="glow" src="{{ get_url(path=page.path ~ '/' ~ person.picture) }}" alt="{{ person.name }}">
+          <h2 class="name">{{ person.name }}</h2>
+          <p class="description">{{ person.description }}</p>
+        </article>
+      {% endfor %}
+    </section>
+  </section>
+{% endblock content %}
