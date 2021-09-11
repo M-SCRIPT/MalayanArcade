@@ -57,7 +57,7 @@
 
 // Button
 .button {
-  display: inline-block;
+  display: inline-flex;
   font-size: 1em;
   background: #fff;
   padding: 10px 25px;
@@ -68,11 +68,37 @@
   color: #111;
   letter-spacing: 2px;
   transition: 0.2s;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    margin-right: 0.8rem;
+  }
 
   &:hover {
     letter-spacing: 3px;
     background-color: #99277d;
     color:#fff;
+  }
+
+  &.is-facebook {
+    background-color: #1877f2;
+    color: #fff;
+
+    &:hover {
+      background-color: #fff;
+      color: #1877f2;
+    }
+  }
+
+  &.is-discord {
+    background-color: #7289da;
+    color: #fff;
+
+    &:hover {
+      background-color: #fff;
+      color: #7289da;
+    }
   }
 }
 

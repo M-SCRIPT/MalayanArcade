@@ -63,6 +63,18 @@
         {% endfor %}
       </section>
     {% endif %}
+
+    {% if page.extra.social_links -%}
+    <section class="links">
+      {% for name, url in page.extra.social_links -%}
+        {% set icon_svg = load_data(path="social_icons/" ~ name ~ ".svg", format="plain") %}
+        <a class="button is-{{ name }}" href="{{ url }}">
+          {{ icon_svg | safe }}
+          <span>{{ name | title }} Link</span>
+        </a>
+      {% endfor %}
+    </section>
+    {% endif %}
   </article>
 
   <script>
