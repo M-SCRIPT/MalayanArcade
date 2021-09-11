@@ -5,7 +5,7 @@ title = "Mathlayan Guild"
 moderators = ["Janyssa Mariae B. Paña", "Raffy S. Centeno"]
 [extra.links]
 "Facebook Link" = "#"
-"Registration Link" = "#"
+"Registration Link" = "https://bit.ly/joinMathlayanGuild"
 "Stream Link" = "https://bit.ly/MathlayanMeets"
 +++
 

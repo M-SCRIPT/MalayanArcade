@@ -1,5 +1,5 @@
 +++
-title = "Thaumatrope"
+title = "KAUMAN Productions"
 
 [extra]
 moderators = ["Seguritan, Ben Jay - Me"]
