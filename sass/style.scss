@@ -501,10 +501,12 @@ footer {
   #developers {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     padding: 2rem;
+    gap: 2em;
 
     .developer-info {
-      width: 33.33%;
+      width: 25%;
       text-align: center;
 
       img {

@@ -4,6 +4,11 @@ template = "about.html"
 
 [extra]
 [[extra.developers]]
+name = "Kevin Lee Cardoza"
+description = "Lorem Ipsum"
+picture = "ned.jpg"
+
+[[extra.developers]]
 name = "Ned Palacios"
 description = "Former M-SCRIPT Club President (2019-2020)"
 picture = "ned.jpg"
