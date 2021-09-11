@@ -5,7 +5,6 @@ title = "Tintang Tinig"
 moderators = ["Mark Anthony Arellano","Jennifer Suganob"]
 
 [extra.links]
-"Facebook Link" = "#"
 "Registration Link" = "https://forms.office.com/Pages/ResponsePage.aspx?id=WGffncW45UyLv_jIzJ3UHQI9CGrRHSdNmmM7mc4rIwBUN0NGOExIQ01TRzY5QzNJM0tSS09SMFNLQy4u"
 "Stream Link" = "https://teams.microsoft.com/l/meetup-join/19%3aeOdDh3IGPBo1OYKWURLAOEBZ-uvzu02M4v4QTo0zD7I1%40thread.tacv2/1631270715402?context=%7b%22Tid%22%3a%229ddf6758-b8c5-4ce5-8bbf-f8c8cc9dd41d%22%2c%22Oid%22%3a%226a083d02-1dd1-4d27-9a63-3b99ce2b2300%22%7d"
 +++
