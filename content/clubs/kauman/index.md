@@ -2,7 +2,6 @@
 title = "Thaumatrope"
 
 [extra]
-slogan = "Tell your story, the best way!"
 moderators = ["Seguritan, Ben Jay - Me"]
 
 [extra.links]
