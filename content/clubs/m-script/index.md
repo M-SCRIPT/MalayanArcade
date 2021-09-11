@@ -6,9 +6,13 @@ slogan = "Hello World!"
 moderators = ["Mr. Kevin Cardoza"]
 
 [extra.links]
-"Facebook Link" = "https://facebook.com/mcm-script"
 "Registration Link" = "#"
 "Stream Link" = "#"
+
+[extra.social_links]
+facebook = "https://facebook.com/mcm-script"
+discord = "https://discord.gg/hFsYY7Tab9"
+
 +++
 
 SCRIPT (Students for Creative Research in IoT, Programming and Technology) is an organization which will provide a fun opportunity for students to broaden their knowledge in Programming and to interact with other students that share the same interest.

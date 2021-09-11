@@ -13,8 +13,10 @@ slogan = "Hello World!"
 moderators = ["Juan de la Cruz"]
 
 [extra.links]
-"Facebook Page" = "https://facebook.com/malayanmindanao"
 "Another Link" = "google.com"
+
+[extra.social_links]
+facebook = "https://facebook.com/malayanmindanao"
 +++
 
 Club description goes here!
@@ -25,6 +27,7 @@ Club description goes here!
 - `moderators` is an array in which where you will specify the names of the club moderators.
 - `logo` is where you will specify the file name of your logo. It must be declared before the `[extra.links]` section. This is optional.
 - The `[extra.links]` section is where you will put your links. Link entries should be `"<link name>" = "<url>"`.
+- The `[extra.social_links]` is where you will put your clubs social media links. Link entries should be `<social media site> = "<url>"`
 
 ## Development
 To run the website locally, install [Zola](https://www.getzola.org/documentation/getting-started/installation/) first.
