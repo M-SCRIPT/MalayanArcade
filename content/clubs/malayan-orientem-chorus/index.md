@@ -1,12 +1,10 @@
 +++
-title = "Malayan Students for Creative Research in IOT, Programming, and Technology"
+title = "Malayan Orientem Chorus"
 
 [extra]
-slogan = "Hello World!"
 moderators = ["Mr. Kevin Cardoza"]
 
 [extra.links]
-"Facebook Link" = "https://facebook.com/mcm-script"
 "Registration Link" = "#"
 "Stream Link" = "#"
 +++
