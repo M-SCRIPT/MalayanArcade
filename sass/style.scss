@@ -496,13 +496,11 @@ footer {
 // About
 .about-page {
   max-width: 900px;
-  margin: 0 auto;
 
   #developers {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    padding: 2rem;
+    padding-top: 3rem;
     gap: 2em;
 
     .developer-info {
