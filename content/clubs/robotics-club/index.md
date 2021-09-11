@@ -1,12 +1,10 @@
 +++
-title = "Malayan Students for Creative Research in IOT, Programming, and Technology"
+title = "Robotics club"
 
 [extra]
-slogan = "Hello World!"
-moderators = ["Mr. Kevin Cardoza"]
+moderators = ["Gerlyn D. Otero"]
 
 [extra.links]
-"Facebook Link" = "https://facebook.com/mcm-script"
 "Registration Link" = "#"
 "Stream Link" = "#"
 +++
