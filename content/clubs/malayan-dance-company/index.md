@@ -2,19 +2,52 @@
 title = "Malayan Dance Company"
 
 [extra]
-slogan = "Hello World!"
-moderators = ["Crisostomo Ybarra"]
+moderators = ["Claribel P. Avila"]
 
 [extra.links]
-"Registration Link" = "#"
-"Stream Link" = "#"
+"Registration Link" = "https://docs.google.com/forms/d/e/1FAIpQLSejSF2JJf_GJG03mYJPY8Bg_WJQ70gsGx4r3mbAG09fjC_AzA/viewform "
+"Stream Link" = "https://teams.microsoft.com/l/meetup-join/19%3ameeting_YWMxODM5NTctYmZmNi00YjhjLTliMjAtMzJhMTY1NmM0YzQ0%40thread.v2/0?context=%7b%22Tid%22%3a%229ddf6758-b8c5-4ce5-8bbf-f8c8cc9dd41d%22%2c%22Oid%22%3a%22ce552af9-1695-4870-af62-c2ed7e22b5e0%22%7d"
 
 [extra.social_links]
 facebook = "https://www.facebook.com/Malayan-Dance-Company-101069802030712/"
 +++
 
-Malayan students for blablabla Imperdiet justo sagittis fermentum eros fermentum feugiat quisque suspendisse consectetur consectetur vestibulum quam in nostra suspendisse id natoque in nunc parturient neque neque dolor. Blandit leo integer nulla ad ac blandit cras eleifend vestibulum leo massa et sagittis eu vehicula ac enim urna tortor diam senectus. Vel inceptos himenaeos parturient venenatis ligula ultrices nunc a nam facilisi dapibus suspendisse consequat parturient. Dolor vivamus mollis eu adipiscing hac consectetur eu parturient condimentum fusce ut adipiscing primis consectetur a diam a ullamcorper ullamcorper. Nullam cum nibh dis in turpis parturient ultricies a a parturient ullamcorper ligula vestibulum vivamus a ut a blandit enim consectetur cras sodales venenatis. 
+"Malayan Dance Company (MDC) is an acclaimed club organization of Malayan Colleges Mindanao that brings forth and showcases excellence and relevance through sensational skills and talent in the performing arts - dancing. It consists of exceptional students and supportive staff members, and features a diverse ensemble of dances namely streetdance, cheerdance, cultural dance, and many more.  
 
-Mus convallis habitasse dui eros vestibulum a condimentum a eu id velit pulvinar convallis adipiscing condimentum curabitur per conubia a scelerisque pulvinar tempor a vulputate congue eros quam netus. Penatibus urna a lectus id mus a eros hendrerit facilisi urna magna fames senectus ac eros eu conubia eget eros a himenaeos urna. Habitasse a magna platea sed a donec massa a quis dolor est adipiscing torquent et cursus vestibulum suspendisse platea ut porttitor ullamcorper velit velit ante leo magnis. Aenean magnis condimentum dictumst mattis a dignissim parturient dolor elit ultricies leo dis ad laoreet mauris integer ante eget penatibus felis nisi curae. Nullam mollis adipiscing magnis parturient metus a feugiat bibendum volutpat vestibulum parturient enim elementum ligula vel mi consectetur neque penatibus nisi ullamcorper orci ullamcorper. 
+ 
 
-Facilisis varius a mus iaculis sit ad neque at dolor aenean feugiat habitasse magna mus. Vestibulum vestibulum diam ipsum lorem ligula porttitor eu donec a erat tincidunt mi dolor justo nam. Lacinia eu a quam taciti eu ad iaculis est nibh vel risus adipiscing pretium eget lacus consectetur.
+MDC aims to foster the innate potential and talents and the burning passion for dancing through vigorous trainings and active involvement in both inside and outside school events and programs. All the while upholding the school's core values and student integrity. 
+
+ 
+
+MDC offers a broad range of benefits including learning new skills and insights, discpline in one's self, sportsmanship, and much more than one can imagine. But more importantly, MDC allows students to freely express themselves, boost their self-esteem, form new bonds, and make the best of their school year and overall youth.  
+
+ 
+
+Malayan Dance Company, a group that promises student development and top-tier school experience. Are you ready Malayans? 
+
+Level up your game with MDC! 
+
+ 
+
+Come join us at Malayan Dance Company where we beat our limitations and make the impossible possible. Show us your skills and let passion move through your body.  
+
+Submission link for audition: 
+
+https://docs.google.com/forms/d/e/1FAIpQLSejSF2JJf_GJG03mYJPY8Bg_WJQ70gsGx4r3mbAG09fjC_AzA/viewform 
+
+Come and be a part of our legacy! 
+
+""Malayans we fight, Ready to ignite” 
+
+Viva Malayans!"" 
+
+ 
+
+#MDC  
+
+#MalayanDanceCompany 
+
+#MDC2021 
+
+ #GAMEONMALAYANS "
