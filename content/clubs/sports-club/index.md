@@ -4,8 +4,8 @@ title = "Sports Club"
 [extra]
 slogan = "The greatest game you can win is won within."
 moderators = ["Albert P. Lagunday"]
-[extra.links]
 
+[extra.links]
 "Registration Link" = "https://bit.ly/MCMSportsClubJoin"
 "Stream Link" = "https://bit.ly/MCMSportsClubWatch"
 +++
