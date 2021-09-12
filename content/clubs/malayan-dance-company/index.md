@@ -12,7 +12,7 @@ moderators = ["Claribel P. Avila"]
 facebook = "https://www.facebook.com/Malayan-Dance-Company-101069802030712/"
 +++
 
-"Malayan Dance Company (MDC) is an acclaimed club organization of Malayan Colleges Mindanao that brings forth and showcases excellence and relevance through sensational skills and talent in the performing arts - dancing. It consists of exceptional students and supportive staff members, and features a diverse ensemble of dances namely streetdance, cheerdance, cultural dance, and many more.  
+Malayan Dance Company (MDC) is an acclaimed club organization of Malayan Colleges Mindanao that brings forth and showcases excellence and relevance through sensational skills and talent in the performing arts - dancing. It consists of exceptional students and supportive staff members, and features a diverse ensemble of dances namely streetdance, cheerdance, cultural dance, and many more. 
 
  
 
@@ -20,7 +20,7 @@ MDC aims to foster the innate potential and talents and the burning passion for 
 
  
 
-MDC offers a broad range of benefits including learning new skills and insights, discpline in one's self, sportsmanship, and much more than one can imagine. But more importantly, MDC allows students to freely express themselves, boost their self-esteem, form new bonds, and make the best of their school year and overall youth.  
+MDC offers a broad range of benefits including learning new skills and insights, discpline in one's self, sportsmanship, and much more than one can imagine. But more importantly, MDC allows students to freely express themselves, boost their self-esteem, form new bonds, and make the best of their school year and overall youth. 
 
  
 
@@ -32,9 +32,6 @@ Level up your game with MDC!
 
 Come join us at Malayan Dance Company where we beat our limitations and make the impossible possible. Show us your skills and let passion move through your body.  
 
-Submission link for audition: 
-
-https://docs.google.com/forms/d/e/1FAIpQLSejSF2JJf_GJG03mYJPY8Bg_WJQ70gsGx4r3mbAG09fjC_AzA/viewform 
 
 Come and be a part of our legacy! 
 
