@@ -8,11 +8,16 @@
   {% set should_autoscroll_carousel = true -%}
   {% set clubs = get_section(path='clubs/_index.md', metadata_only=true) -%}
   {% set start_index = 0 -%}
+  {% set assets_length = page.assets | length %}
+  {% if page.extra.poster -%}
+    {% set assets_length = assets_length - 1 -%}
+  {% endif -%}
 
   <article class="club-page">
     <section class="meta">
       {% if page.extra.logo -%}
         <img class="logo" src="{{ get_url(path=clubs.path ~ page.slug ~ '/' ~ page.extra.logo) }}" alt="{{ page.title }}">
+        {% set assets_length = assets_length - 1 -%}
       {% endif -%}
       <h1 class="title">{{ page.title }}</h1>
       {% if page.extra.slogan -%}
