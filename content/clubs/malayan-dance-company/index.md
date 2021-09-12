@@ -36,7 +36,7 @@ Come join us at Malayan Dance Company where we beat our limitations and make the
 
 Come and be a part of our legacy! 
 
-Malayans we fight, Ready to ignite” 
+Malayans we fight, Ready to ignite
 
 Viva Malayans!
 
@@ -48,4 +48,4 @@ Viva Malayans!
 
 #MDC2021 
 
- #GAMEONMALAYANS 
+#GAMEONMALAYANS 
