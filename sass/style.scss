@@ -157,13 +157,16 @@ footer {
   z-index: 10;
   display: flex;
   align-items: center;
-  justify-content: start;
+  flex-direction: column-reverse;
+  justify-content: space-between;
   margin-top: 3rem;
   padding: 0 40px;
 
   // Social Links
   .social {
     display: flex;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
 
     li {
       list-style: none;
@@ -185,8 +188,31 @@ footer {
     }
   }
 
+  .powered-by {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+
+    span {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    img {
+      margin-left: 0.5rem;
+      width: 4rem;
+    }
+  }
+
   @include breakpoint(md) {
     padding: 0;
+    flex-direction: row;
+
+    .social {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
 }
 
