@@ -4,6 +4,7 @@ title = "Malayan Students for Creative Research in IOT, Programming, and Technol
 [extra]
 slogan = "Hello World!"
 moderators = ["Mr. Kevin Cardoza"]
+logo = "logo.png"
 
 [extra.links]
 "Registration Link" = "#"

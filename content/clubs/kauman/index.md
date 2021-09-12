@@ -3,6 +3,7 @@ title = "KAUMAN Productions"
 
 [extra]
 moderators = ["Seguritan, Ben Jay - Me"]
+logo = "logo.png"
 
 [extra.links]
 "Registration Link" = "#"

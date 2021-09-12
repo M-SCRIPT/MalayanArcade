@@ -4,6 +4,7 @@ title = "Sports Club"
 [extra]
 slogan = "The greatest game you can win is won within."
 moderators = ["Albert P. Lagunday"]
+logo = "logo.png"
 
 [extra.links]
 "Registration Link" = "https://bit.ly/MCMSportsClubJoin"

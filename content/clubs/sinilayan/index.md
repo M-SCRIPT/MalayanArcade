@@ -4,6 +4,8 @@ title = "Sinilayan Club"
 [extra]
 slogan = "Imagine. We will create."
 moderators = ["Jondel S. Ihalas"]
+logo = "logo.png"
+poster = "poster.png"
 
 [extra.links]
 "Registration Link" = "https://forms.office.com/r/LwwvQ1sHrC"

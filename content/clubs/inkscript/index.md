@@ -3,6 +3,8 @@ title = "The InkScript"
 
 [extra]
 moderators = ["Hanna Regine Valencerina","Cielo Batingal"]
+logo = "logo.png"
+
 [extra.links]
 "Registration Link" = "#"
 "Stream Link" = "https://bit.ly/WatchInkScript"

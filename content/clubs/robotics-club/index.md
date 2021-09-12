@@ -3,6 +3,7 @@ title = "Robotics club"
 
 [extra]
 moderators = ["Gerlyn D. Otero"]
+logo = "logo.png"
 
 [extra.links]
 "Registration Link" = "#"

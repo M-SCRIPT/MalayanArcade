@@ -3,6 +3,7 @@ title = "Tintang Tinig"
 
 [extra]
 moderators = ["Mark Anthony Arellano","Jennifer Suganob"]
+logo = "logo.png"
 
 [extra.links]
 "Registration Link" = "https://forms.office.com/Pages/ResponsePage.aspx?id=WGffncW45UyLv_jIzJ3UHQI9CGrRHSdNmmM7mc4rIwBUN0NGOExIQ01TRzY5QzNJM0tSS09SMFNLQy4u"

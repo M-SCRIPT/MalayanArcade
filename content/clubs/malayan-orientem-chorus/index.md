@@ -3,6 +3,7 @@ title = "Malayan Orientem Chorus"
 
 [extra]
 moderators = ["Mr. Kevin Cardoza"]
+logo = "logo.png"
 
 [extra.links]
 "Registration Link" = "#"

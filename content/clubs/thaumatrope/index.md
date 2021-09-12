@@ -4,6 +4,7 @@ title = "Thaumatrope"
 [extra]
 slogan = "Tell your story, the best way!"
 moderators = ["Earl Clive N. Dacal"]
+logo = "logo.png"
 poster = "poster.gif"
 
 [extra.links]

@@ -4,6 +4,8 @@ title = "Malayan High School Red Cross"
 [extra]
 slogan = "Per Humanitatem ad Pacem"
 moderators = ["M. Sagaral", "M. Lapiras"]
+logo = "logo.png"
+poster = "poster.png"
 
 [extra.links]
 "Registration Link" = "https://forms.office.com/r/12nCeDeK2C"

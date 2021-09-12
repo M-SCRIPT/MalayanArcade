@@ -3,6 +3,7 @@ title = "English Club"
 
 [extra]
 moderators = ["Kiarah Ibañez","Jaremiah Sapong"]
+logo = "logo.png"
 
 [extra.links]
 "Stream Link" = "#"

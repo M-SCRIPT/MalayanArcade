@@ -3,6 +3,8 @@ title = "Mathlayan Guild"
 
 [extra]
 moderators = ["Janyssa Mariae B. Paña", "Raffy S. Centeno"]
+logo = "logo.png"
+
 [extra.links]
 "Registration Link" = "https://bit.ly/joinMathlayanGuild"
 "Stream Link" = "https://bit.ly/MathlayanMeets"
