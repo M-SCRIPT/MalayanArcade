@@ -28,6 +28,7 @@ Malayan Dance Company, a group that promises student development and top-tier sc
 
 Level up your game with MDC! 
 
+
  
 
 Come join us at Malayan Dance Company where we beat our limitations and make the impossible possible. Show us your skills and let passion move through your body.  
@@ -35,9 +36,9 @@ Come join us at Malayan Dance Company where we beat our limitations and make the
 
 Come and be a part of our legacy! 
 
-""Malayans we fight, Ready to ignite” 
+Malayans we fight, Ready to ignite” 
 
-Viva Malayans!"" 
+Viva Malayans!
 
  
 
@@ -47,4 +48,4 @@ Viva Malayans!""
 
 #MDC2021 
 
- #GAMEONMALAYANS "
+ #GAMEONMALAYANS 
