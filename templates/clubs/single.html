@@ -49,7 +49,7 @@
           <section class="carousel-inner">
             {% set i = 0 -%}
             {% for asset in page.assets -%}
-              {% if asset != logo_file_path and asset != poster_file_path and asset is matching("[.](jpg|png)$") -%}
+              {% if asset is not ending_with(logo_file_path) and asset is not ending_with(poster_file_path) and asset is matching("[.](jpg|png)$") -%}
                 <div class="aspect-ratio-16-9" style="background-image: url({{ get_url(path=asset) }});"></div>
                 {% set_global i = i + 1 %}
               {% elif asset is matching("[.](mp4)$") -%}
