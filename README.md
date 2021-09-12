@@ -26,7 +26,7 @@ Club description goes here!
 ### `[extra]` Section
 - `slogan` is the club tagline/slogan.
 - `moderators` is an array in which where you will specify the names of the club moderators.
-- `logo` is where you will specify the file name of your logo. This is optional.
+- `logo` is where you will specify the file name of your logo.
 - `poster` is where you will specify the file name of your poster. This is optional.
 - The `[extra.links]` section is where you will put your links. Link entries should be `"<link name>" = "<url>"`.
 - The `[extra.social_links]` is where you will put your clubs social media links. Link entries should be `<social media site> = "<url>"`
