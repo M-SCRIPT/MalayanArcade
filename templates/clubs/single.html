@@ -5,40 +5,70 @@
 {% endblock head %}
 
 {% block content %}
+  {% set has_logo = true -%}
+  {% set has_poster = false -%}
   {% set should_autoscroll_carousel = true -%}
-  {% set clubs = get_section(path='clubs/_index.md') -%}
-  {% set logo_file_name = 'logo.png' -%}
+  {% set clubs = get_section(path='clubs/_index.md', metadata_only=true) -%}
+  {% set poster_file_path = clubs.path ~ page.slug ~ '/poster.png' -%}
+  {% set logo_file_path = clubs.path ~ page.slug ~ '/logo.png' -%}
+  {% set assets_length = page.assets | length -%}
   {% set start_index = 0 -%}
-  {% if page.extra.logo -%}{% set logo_file_name = page.extra.logo %}{% endif %}
+
+  {% if page.extra.logo -%}
+    {% set_global logo_file_path = clubs.path ~ page.slug ~ '/' ~ page.extra.logo | safe -%}
+  {% endif -%}
+
+  {% if page.extra.poster -%}
+    {% set_global poster_file_path = clubs.path ~ page.slug ~ '/' ~ page.extra.poster | safe -%}
+  {% endif -%}
+
+  {% for asset in page.assets -%}
+    {% if asset == logo_file_path -%}
+      {% set_global has_logo = true -%}
+      {% set_global assets_length = assets_length - 1 -%}
+    {% elif asset == poster_file_path -%}
+      {% set_global has_poster = true -%}
+      {% set_global assets_length = assets_length - 1 -%}
+    {% endif %}
+  {% endfor -%}
+
   <article class="club-page">
     <section class="meta">
-      <img class="logo" src="{{ get_url(path=clubs.path ~ page.slug ~ '/' ~ logo_file_name) }}" alt="{{ page.title }}">
+      {% if has_logo -%}
+        <img class="logo" src="{{ get_url(path=logo_file_path) }}" alt="{{ page.title }}">
+      {% endif -%}
       <h1 class="title">{{ page.title }}</h1>
       {% if page.extra.slogan -%}
         <h2 class="subtitle">"{{ page.extra.slogan }}"</h2>
-      {% endif %}
+      {% endif -%}
     </section>
 
-    {% if page.assets | length > 1 %}
+    {% if assets_length > 1 %}
       <section class="carousel aspect-ratio-16-9">
         <div class="inner">
           <section class="carousel-inner">
             {% set i = 0 -%}
             {% for asset in page.assets -%}
-              {% if asset is not ending_with(logo_file_name) and asset is matching("[.](jpg|png)$") -%}
+              {% if asset != logo_file_path and asset != poster_file_path and asset is matching("[.](jpg|png)$") -%}
                 <div class="aspect-ratio-16-9" style="background-image: url({{ get_url(path=asset) }});"></div>
                 {% set_global i = i + 1 %}
               {% elif asset is matching("[.](mp4)$") -%}
                 {% set_global should_autoscroll_carousel = false -%}
-                {% set_global start_index = i %}
+                {% set_global start_index = i -%}
                 <video id="video" class="aspect-ratio-16-9" src="{{ get_url(path=asset) }}" controls autoplay muted></video>
-                {% set_global i = i + 1 %}
-              {% endif %}
-            {% endfor %}
+                {% set_global i = i + 1 -%}
+              {% endif -%}
+            {% endfor -%}
           </section>
         </div>
       </section>
-    {% endif %}
+    {% endif -%}
+
+    {% if has_poster -%}
+      <div class="poster">
+        <img src="{{ get_url(path=poster_file_path) }}" alt="{{ page.title }}">
+      </div>
+    {% endif -%}
 
     <section class="details">
       <div class="description">
@@ -60,9 +90,9 @@
       <section class="links">
         {% for label, url in page.extra.links -%}
           <a class="button" href="{{ url }}">{{ label }}</a>
-        {% endfor %}
+        {% endfor -%}
       </section>
-    {% endif %}
+    {% endif -%}
 
     {% if page.extra.social_links -%}
     <section class="links">
@@ -72,9 +102,9 @@
           {{ icon_svg | safe }}
           <span>{{ name | title }} Link</span>
         </a>
-      {% endfor %}
+      {% endfor -%}
     </section>
-    {% endif %}
+    {% endif -%}
   </article>
 
   <script>

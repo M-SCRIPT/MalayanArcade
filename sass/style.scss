@@ -370,6 +370,14 @@ footer {
     }
   }
 
+  .poster {
+    margin-bottom: 2rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
   .details {
     display: flex;
     flex-direction: column;
