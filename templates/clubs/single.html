@@ -23,16 +23,14 @@
   {% endif -%}
 
   {% for asset in page.assets -%}
-    {% if asset == logo_file_path -%}
+    {% if asset is ending_with(logo_file_path) -%}
       {% set_global has_logo = true -%}
       {% set_global assets_length = assets_length - 1 -%}
-    {% elif asset == poster_file_path -%}
+    {% elif asset is ending_with(poster_file_path) -%}
       {% set_global has_poster = true -%}
       {% set_global assets_length = assets_length - 1 -%}
     {% endif %}
   {% endfor -%}
-
-  <!-- Assets: {{ page.assets | json_encode | safe }} -->
 
   <article class="club-page">
     <section class="meta">
