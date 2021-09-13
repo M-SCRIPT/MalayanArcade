@@ -103,24 +103,22 @@
     var ENDED_EVENT = 'ended';
 
     // do not add event listener on null element
-    if (!videoEl) return;
-
-    function videoEndedHandler() {
-      window.shouldAutoscroll = true;
-      window.slider.refresh();
-      window.slider.goTo('next');
-      
-      var autoplay = setInterval(function() {
+    if (videoEl) {
+      function videoEndedHandler() {
+        window.shouldAutoscroll = true;
+        window.slider.refresh();
         window.slider.goTo('next');
-        if (window.slider.getInfo().displayIndex - 1 == window.startIndex) {
-          videoEl.removeEventListener(ENDED_EVENT, videoEndedHandler);
-          clearInterval(autoplay);
-          return;
-        }
-      }, 10000);
+        var autoplay = setInterval(function() {
+          window.slider.goTo('next');
+          if (window.slider.getInfo().displayIndex - 1 == window.startIndex) {
+            videoEl.removeEventListener(ENDED_EVENT, videoEndedHandler);
+            clearInterval(autoplay);
+            return;
+          }
+        }, 10000);
+      }
+      videoEl.addEventListener(ENDED_EVENT, videoEndedHandler);
     }
-
-    videoEl.addEventListener(ENDED_EVENT, videoEndedHandler);
   </script>
 {% endblock content %}
 
