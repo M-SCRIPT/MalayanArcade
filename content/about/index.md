@@ -5,8 +5,8 @@ template = "about.html"
 [extra]
 [[extra.developers]]
 name = "Kevin Lee Cardoza"
-description = "Lorem Ipsum"
-picture = "ned.jpg"
+description = "Club Moderator, M-SCRIPT (2019 - Present)"
+picture = "keb.jpg"
 
 [[extra.developers]]
 name = "Ned Palacios"
