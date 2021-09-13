@@ -4,6 +4,7 @@ title = "Malayan Orientem Chorus"
 [extra]
 moderators = ["Kendrick Dionio", "Joan Casas"]
 logo = "logo.png"
+poster = "poster.gif"
 
 [extra.links]
 "Registration Link" = "https://bit.ly/joinMCMMOC"
