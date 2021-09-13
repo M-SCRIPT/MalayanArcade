@@ -49,6 +49,12 @@
           </section>
         </div>
       </section>
+      
+      <section class="carousel-controls">
+        <button onclick="prevSlide()" class="button">Prev</button>
+        <button id="autoPlayBtn" onclick="toggleAutoplay(this)" class="button">Autoplay: ON</button>
+        <button onclick="nextSlide()" class="button">Next</button>
+      </section>
     {% endif -%}
 
     {% if page.extra.poster -%}
@@ -95,44 +101,75 @@
   </article>
 
   <script>
+    window.autoPlayBtn = document.getElementById('autoPlayBtn');
     window.shouldAutoscroll = "{{ should_autoscroll_carousel }}" == "true";
     window.startIndex = parseInt("{{ start_index }}");
+    window.isPlaying = true;
 
     // video
     var videoEl = document.getElementById('video');
     var ENDED_EVENT = 'ended';
 
+    function toggleAutoplay(e) {
+      if (window.isPlaying) {
+        window.slider.pause();
+      } else {
+        window.slider.play();
+      }
+      window.isPlaying = !window.isPlaying;
+      if (e) {
+        e.innerHTML = window.isPlaying ? "Autoplay: ON" : "Autoplay: OFF";
+      }
+    }
+
+    function nextSlide() { window.slider.goTo('next'); }
+    function prevSlide() { window.slider.goTo('prev'); }
+
     // do not add event listener on null element
     if (videoEl) {
       function videoEndedHandler() {
-        window.shouldAutoscroll = true;
-        window.slider.refresh();
         window.slider.goTo('next');
-        var autoplay = setInterval(function() {
-          window.slider.goTo('next');
-          if (window.slider.getInfo().displayIndex - 1 == window.startIndex) {
-            videoEl.removeEventListener(ENDED_EVENT, videoEndedHandler);
-            clearInterval(autoplay);
-            return;
-          }
-        }, 10000);
+        setTimeout(function() {
+          videoEl.pause();
+          videoEl.currentTime = 0;
+          videoEl.muted = true;
+          toggleAutoplay(window.autoPlayBtn);
+        }, 100);
       }
+
       videoEl.addEventListener(ENDED_EVENT, videoEndedHandler);
+
+      setTimeout(function() {
+        window.slider.events.on('indexChanged', function () {
+          if (window.slider.getInfo().displayIndex - 1 == window.startIndex) {
+            videoEl.play();
+            if (window.isPlaying) toggleAutoplay(window.autoPlayBtn);
+          } else if (window.slider.getInfo().displayIndex - 2 == window.startIndex) {
+            videoEl.pause();
+          }
+        });
+      }, 100);
     }
   </script>
 {% endblock content %}
 
 {% block foot %}
 <script>
-  var slider = tns({
+  window.slider = tns({
     container: '.carousel-inner',
     items: 1,
     slideBy: 'page',
-    autoplay: window.shouldAutoscroll,
+    autoplay: true,
     nav: false,
-    controls: window.shouldAutoscroll,
-    mouseDrag: true,
+    controls: false,
+    autoplayButtonOutput: false,
     startIndex: window.startIndex
   });
+
+  setTimeout(function() {
+    if (window.isPlaying && !window.shouldAutoscroll) {
+      toggleAutoplay(window.autoPlayBtn);
+    }
+  }, 100);
 </script>
 {% endblock foot %}

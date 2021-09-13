@@ -400,8 +400,6 @@ footer {
 
   // Carousel
   .carousel {
-    margin-bottom: 2rem;
-    
     .tns-outer {
       position: relative;
       height: 100%;
@@ -468,6 +466,16 @@ footer {
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
+    }
+  }
+
+  .carousel-controls {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+
+    .button:not(:last-child) {
+      margin-right: 0.25rem;
     }
   }
 
