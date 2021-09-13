@@ -4,6 +4,7 @@ title = "English Club"
 [extra]
 moderators = ["Kiarah Ibañez","Jaremiah Sapong"]
 logo = "logo.png"
+poster = "poster.jpg"
 
 [extra.links]
 "Stream Link" = "https://bit.ly/2Yy222f"

@@ -5,6 +5,7 @@ title = "Makata Club"
 slogan = "Kaya’t halina at sama-sama tayong paunlarin ang sariling atin!"
 moderators = ["Jarelyn Lingasa", "Celeste Ligutom"]
 logo = "logo.png"
+poster = "poster.png"
 
 [extra.links]
 "Registration Link" = "#"

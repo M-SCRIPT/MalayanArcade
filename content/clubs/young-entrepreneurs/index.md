@@ -4,6 +4,7 @@ title = "Young Entrepreneurs' Club"
 [extra]
 moderators = ["Jera Longakit", "Jay-r Tayaban"]
 logo = "logo.png"
+poster = "poster.png"
 
 [extra.links]
 "Registration Link" = "https://forms.gle/ouYt9RpjFGU5Z8pS7"

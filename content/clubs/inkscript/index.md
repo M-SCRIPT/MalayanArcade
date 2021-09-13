@@ -3,7 +3,7 @@ title = "The InkScript"
 
 [extra]
 moderators = ["Hanna Regine Valencerina","Cielo Batingal"]
-logo = "logo.png"
+logo = "logo.gif"
 
 [extra.links]
 "Registration Link" = "#"
