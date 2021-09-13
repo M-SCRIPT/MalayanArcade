@@ -25,16 +25,15 @@
       {% endif -%}
     </section>
 
-    {% if assets_length > 1 %}
+    {% if assets_length != 0 %}
       <section class="carousel aspect-ratio-16-9">
         <div class="inner">
           <section class="carousel-inner">
             {% set i = 0 -%}
             {% for asset in page.assets -%}
-              {% if page.extra.logo and asset is matching(page.extra.logo ~ "$") -%}
+              {% if page.extra.logo and asset is ending_with(page.extra.logo) -%}
                 {% continue -%}
-              {% endif -%}
-              {% if page.extra.poster and asset is matching(page.extra.poster ~ "$") -%}
+              {% elif page.extra.poster and asset is ending_with(page.extra.poster) -%}
                 {% continue -%}
               {% endif -%}
               {% if asset is matching("[.](jpg|png)$") -%}
