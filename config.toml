@@ -16,6 +16,7 @@ highlight_code = false
 [extra]
 # Put all your custom variables here
 show_header_logo = true
+site_description = "Are you up for the challenge? It is time to join your clan and farm EXP together! Buff your skills through joining this year’s Club Fair! Unlock new abilities and rise to new levels – no time for camping! Remember, we are the future’s hope. Our mission: Don’t go AFK! Sign up for the different clubs and organizations in Malayan Colleges Mindanao."
 
 [extra.social_links]
 facebook = "https://facebook.com/mcm-script"
