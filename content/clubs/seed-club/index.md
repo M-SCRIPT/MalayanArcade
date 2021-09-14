@@ -27,6 +27,5 @@ SEED (Students of Excellence Empowered to Disciple) is a campus ministry from Ch
 
 5. To nurture student’s talents and skills and use it for God’s greater glory. 
 
-Be part of something bigger than yourself. 
 
 Join the Seed family! 
