@@ -8,7 +8,7 @@ logo = "logo.png"
 poster = "poster.png"
 
 [extra.links]
-"Registration Link" = "#"
+"Registration Link" = " https://forms.office.com/r/bj2kqchbbF"
 "Stream Link" = "#"
 
 [extra.social_links]
