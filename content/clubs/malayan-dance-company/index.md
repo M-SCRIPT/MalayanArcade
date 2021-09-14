@@ -4,6 +4,7 @@ title = "Malayan Dance Company"
 [extra]
 moderators = ["Claribel P. Avila"]
 logo = "logo.png"
+poster = "poster.jpg"
 
 [extra.links]
 "Registration Link" = "https://docs.google.com/forms/d/e/1FAIpQLSejSF2JJf_GJG03mYJPY8Bg_WJQ70gsGx4r3mbAG09fjC_AzA/viewform "
@@ -44,9 +45,6 @@ Viva Malayans!
  
 
 #MDC  
-
 #MalayanDanceCompany 
-
 #MDC2021 
-
 #GAMEONMALAYANS 
