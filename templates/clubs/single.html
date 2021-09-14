@@ -51,9 +51,11 @@
       </section>
       
       <section class="carousel-controls">
+        {% if assets_length > 1 -%}
         <button onclick="prevSlide()" class="button">Prev</button>
         <button id="autoPlayBtn" onclick="toggleAutoplay(this)" class="button">Autoplay: ON</button>
         <button onclick="nextSlide()" class="button">Next</button>
+        {% endif -%}
       </section>
     {% endif -%}
 
