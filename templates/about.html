@@ -8,8 +8,10 @@
       {% for person in page.extra.developers %}
         <article class="developer-info">
           <img class="glow" src="{{ get_url(path=page.path ~ '/' ~ person.picture) }}" alt="{{ person.name }}">
-          <h2 class="name">{{ person.name }}</h2>
-          <p class="description">{{ person.description }}</p>
+          <div class="meta">
+            <h2 class="name">{{ person.name }}</h2>
+            <p class="description">{{ person.description }}</p>
+          </div>
         </article>
       {% endfor %}
     </section>

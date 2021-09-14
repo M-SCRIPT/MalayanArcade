@@ -385,6 +385,10 @@ footer {
     .description, aside {
       width: 100%;
     }
+
+    p {
+      margin-bottom: 1rem;
+    }
   }
 
   .links {
@@ -538,20 +542,54 @@ footer {
 // About
 .about-page {
   max-width: 900px;
+  padding: 0 2rem;
 
   #developers {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     padding-top: 3rem;
     gap: 2em;
 
     .developer-info {
-      width: 25%;
-      text-align: center;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
 
       img {
+        width: 25%;
         border-radius: 100%;
       }
+
+      .meta {
+        width: 75%;
+        padding-left: 1rem;
+      }
     }
+
+    @include breakpoint(md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .developer-info {
+        flex-direction: column;
+        width: 25%;
+        
+        img {
+          width: 100%;
+        }
+        
+        .meta {
+          padding-left: 0;
+          padding-top: 2rem;
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(md) {
+    padding: 0;
   }
 }
