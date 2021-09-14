@@ -2,6 +2,7 @@
 title = "Robotics club"
 
 [extra]
+slogan = "Be on the right side of the Robot Apocalypse. Join today!"
 moderators = ["Gerlyn D. Otero", "Jennyfer Pactor"]
 logo = "logo.png"
 
