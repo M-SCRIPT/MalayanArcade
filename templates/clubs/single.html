@@ -84,7 +84,7 @@
     {% if page.extra.links -%} 
       <section class="links">
         {% for label, url in page.extra.links -%}
-          <a class="button" href="{{ url }}">{{ label }}</a>
+          <a class="button" target="_blank" href="{{ url }}">{{ label }}</a>
         {% endfor -%}
       </section>
     {% endif -%}
@@ -93,7 +93,7 @@
     <section class="links">
       {% for name, url in page.extra.social_links -%}
         {% set icon_svg = load_data(path="static/social_icons/" ~ name ~ ".svg", format="plain") %}
-        <a class="button is-{{ name }}" href="{{ url }}">
+        <a class="button is-{{ name }}" target="_blank" href="{{ url }}">
           {{ icon_svg | safe }}
           <span>{{ name | title }} Link</span>
         </a>

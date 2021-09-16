@@ -37,7 +37,7 @@
       <ul class="social">
         {% for name, url in config.extra.social_links %}
           <li>
-            <a href="{{ url }}">
+            <a target="_blank" href="{{ url }}">
               <img src="{{ get_url(path='social_icons/' ~ name ~ '.svg') }}" alt="{{ name }}">
             </a>
           </li>
