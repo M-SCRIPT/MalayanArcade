@@ -2,7 +2,7 @@
 title = "Makata Club"
 
 [extra]
-slogan = "Kaya’t halina at sama-sama tayong paunlarin ang sariling atin!"
+slogan = "Halina at sama-sama tayong paunlarin ang sariling atin!"
 moderators = ["Jarelyn Lingasa", "Celeste Ligutom"]
 logo = "logo.png"
 poster = "poster.png"
