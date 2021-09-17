@@ -9,7 +9,7 @@ poster = "poster.png"
 
 [extra.links]
 "Registration Link" = " https://forms.office.com/r/bj2kqchbbF"
-"Stream Link" = "#"
+"Stream Link" = "https://teams.microsoft.com/l/meetup-join/19%3ameeting_ODU4ZTUzMmQtOTBhYy00MmI0LWJhYTAtNmYxOGM3ODEzNWE1%40thread.v2/0?context=%7b%22Tid%22%3a%229ddf6758-b8c5-4ce5-8bbf-f8c8cc9dd41d%22%2c%22Oid%22%3a%2261b45464-f059-4e6c-8822-06cf46b46e05%22%7d"
 
 [extra.social_links]
 facebook = "https://facebook.com/mcm-script"
