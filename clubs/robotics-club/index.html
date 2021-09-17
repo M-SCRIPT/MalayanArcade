@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Students work together to design innovative technologies that would transform manual processes into automation with robotics and electronic circuitry. 
+This is the official High School Robotics club of Malayan Colleges Mindanao.
+Be on the right side of  the Robot Apocalypse. Join now!
+">
+  <title>Robotics club - Malayan Arcade 2021 - MCM SHS Club Fair</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,700&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" href="https:&#x2F;&#x2F;m-script.github.io&#x2F;MalayanArcade&#x2F;style.css?h=334792ef249caf8d0192cb881627f4d207d154cd27b6c0cafd2231d349c3d2dc">
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css" integrity="sha512-eMxdaSf5XW3ZW1wZCrWItO2jZ7A9FhuZfjVdztr7ZsKNOmt6TUMTQgfpNoVRyfPE5S9BC0A4suXzsGSrAOWcoQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js" integrity="sha512-D/zaRVk05q6ERt1JgWB49kL6tyerY7a94egaVv6ObiGcw3OCEv0tvoPDEsVqL28HyAZhDd483ix8gkWQGDgEKw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+  <main style="background-image: url(https:&#x2F;&#x2F;m-script.github.io&#x2F;MalayanArcade&#x2F;still-bg.png)">
+    <header>
+      
+      <a href="https:&#x2F;&#x2F;m-script.github.io&#x2F;MalayanArcade" class="site-brand glow-text">Malayan Arcade 2021</a>
+      
+      <span class="toggle"></span>
+    </header>
+    
+    
+    <section class="background">
+      <div class="overlay"></div>
+    </section>
+    
+
+    <section class="main-content">
+      
+  
+  <article class="club-page">
+    <section class="meta">
+      <img class="logo" src="https:&#x2F;&#x2F;m-script.github.io&#x2F;MalayanArcade&#x2F;clubs&#x2F;robotics-club&#x2F;logo.png" alt="Robotics club">
+        <h1 class="title">Robotics club</h1>
+      <h2 class="subtitle">"Be on the right side of the Robot Apocalypse. Join today!"</h2>
+      </section>
+
+    
+      <section class="carousel aspect-ratio-16-9">
+        <div class="inner">
+          <section class="carousel-inner">
+            <div class="aspect-ratio-16-9" style="background-image: url(https:&#x2F;&#x2F;m-script.github.io&#x2F;MalayanArcade&#x2F;clubs&#x2F;robotics-club&#x2F;2.jpg);"></div>
+                
+              <video id="video" class="aspect-ratio-16-9" src="https:&#x2F;&#x2F;m-script.github.io&#x2F;MalayanArcade&#x2F;clubs&#x2F;robotics-club&#x2F;0.mp4" controls autoplay muted></video>
+                <div class="aspect-ratio-16-9" style="background-image: url(https:&#x2F;&#x2F;m-script.github.io&#x2F;MalayanArcade&#x2F;clubs&#x2F;robotics-club&#x2F;1.png);"></div>
+                
+              </section>
+        </div>
+      </section>
+      
+      <section class="carousel-controls">
+        <button onclick="prevSlide()" class="button">Prev</button>
+        <button id="autoPlayBtn" onclick="toggleAutoplay(this)" class="button">Autoplay: ON</button>
+        <button onclick="nextSlide()" class="button">Next</button>
+        </section>
+    <section class="details">
+      <div class="description">
+        <h4>About the club</h4>
+        <p>Students work together to design innovative technologies that would transform manual processes into automation with robotics and electronic circuitry. </p>
+<p>This is the official High School Robotics club of Malayan Colleges Mindanao.</p>
+<p>Be on the right side of  the Robot Apocalypse. Join now!</p>
+
+      </div>
+
+      <aside>
+        <h4>Club Moderators</h4>
+        <p>Gerlyn D. Otero</p>
+        <p>Jennyfer Pactor</p>
+        
+      </aside>
+      
+    </section>
+
+    <section class="links">
+        <a class="button" target="_blank" href="https:&#x2F;&#x2F;bit.ly&#x2F;3C5kb5Z">Registration Link</a>
+        <a class="button" target="_blank" href="https:&#x2F;&#x2F;bit.ly&#x2F;2VAE8SG">Stream Link</a>
+        </section>
+    </article>
+
+  <script>
+    window.autoPlayBtn = document.getElementById('autoPlayBtn');
+    window.shouldAutoscroll = "false" == "true";
+    window.startIndex = parseInt("1");
+    window.isPlaying = true;
+
+    // video
+    var videoEl = document.getElementById('video');
+    var ENDED_EVENT = 'ended';
+
+    function toggleAutoplay(e) {
+      if (window.isPlaying) {
+        window.slider.pause();
+      } else {
+        window.slider.play();
+      }
+      window.isPlaying = !window.isPlaying;
+      if (e) {
+        e.innerHTML = window.isPlaying ? "Autoplay: ON" : "Autoplay: OFF";
+      }
+    }
+
+    function nextSlide() { window.slider.goTo('next'); }
+    function prevSlide() { window.slider.goTo('prev'); }
+
+    // do not add event listener on null element
+    if (videoEl) {
+      function videoEndedHandler() {
+        window.slider.goTo('next');
+        setTimeout(function() {
+          videoEl.pause();
+          videoEl.currentTime = 0;
+          videoEl.muted = true;
+          toggleAutoplay(window.autoPlayBtn);
+        }, 100);
+      }
+
+      videoEl.addEventListener(ENDED_EVENT, videoEndedHandler);
+
+      setTimeout(function() {
+        window.slider.events.on('indexChanged', function () {
+          if (window.slider.getInfo().displayIndex - 1 == window.startIndex) {
+            videoEl.play();
+            if (window.isPlaying) toggleAutoplay(window.autoPlayBtn);
+          } else if (window.slider.getInfo().displayIndex - 2 == window.startIndex) {
+            videoEl.pause();
+          }
+        });
+      }, 100);
+    }
+  </script>
+
+    </section>
+
+    <footer>
+      <ul class="social">
+        
+          <li>
+            <a target="_blank" href="https:&#x2F;&#x2F;discord.gg&#x2F;hFsYY7Tab9">
+              <img src="https:&#x2F;&#x2F;m-script.github.io&#x2F;MalayanArcade&#x2F;social_icons&#x2F;discord.svg" alt="discord">
+            </a>
+          </li>
+        
+          <li>
+            <a target="_blank" href="https:&#x2F;&#x2F;facebook.com&#x2F;mcm-script">
+              <img src="https:&#x2F;&#x2F;m-script.github.io&#x2F;MalayanArcade&#x2F;social_icons&#x2F;facebook.svg" alt="facebook">
+            </a>
+          </li>
+        
+      </ul>
+
+      <section class="powered-by">
+        <span>Powered By</span>
+        <img src="https:&#x2F;&#x2F;m-script.github.io&#x2F;MalayanArcade&#x2F;mscript-logo.png" alt="M-SCRIPT">
+      </section>
+    </footer>
+  </main>
+
+  <nav class="menu">
+    <ul>
+      <li><a href="https:&#x2F;&#x2F;m-script.github.io&#x2F;MalayanArcade">Home</a></li>
+      <li><a href="https:&#x2F;&#x2F;m-script.github.io&#x2F;MalayanArcade&#x2F;clubs">Clubs</a></li>
+      <li><a href="https:&#x2F;&#x2F;m-script.github.io&#x2F;MalayanArcade&#x2F;about">About the Devs</a></li>
+    </ul>
+  </nav>
+
+  
+<script>
+  window.slider = tns({
+    container: '.carousel-inner',
+    items: 1,
+    slideBy: 'page',
+    autoplay: true,
+    nav: false,
+    controls: false,
+    autoplayButtonOutput: false,
+    startIndex: window.startIndex
+  });
+
+  setTimeout(function() {
+    if (window.isPlaying && !window.shouldAutoscroll) {
+      toggleAutoplay(window.autoPlayBtn);
+    }
+  }, 100);
+</script>
+
+  <script src="https:&#x2F;&#x2F;m-script.github.io&#x2F;MalayanArcade&#x2F;script.js"></script>
+</body>
+
+</html>
